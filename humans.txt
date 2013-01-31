@@ -1,0 +1,19 @@
+# TEAM
+
+    Raven John Lagrimas -- Developer
+    Joseph Conrad Almonte -- Developer
+    Jom Cordova -- Developer
+    Marian Bundalian -- Developer
+    Karla Palevino -- Developer
+
+# THANKS
+
+	Tracey Garcia
+	Zenith Arnejo
+
+# TECHNOLOGY
+
+	Modernzr, Normalize.css
+	Bootstrap, Font-awesome
+    HTML5, CSS3
+    jQuery
