@@ -1,0 +1,58 @@
+-- FRONT-END
+
+[ ] Create a module view_users and add_user with garbage data
+[ ] Position both modules to "main" div
+[ ] Sort modules where add_user will come first before view_users
+[ ] Stlye modules where add_user floats left and view_users floats right,
+	height = 300px
+	width = half of the parent div
+	put a border to make it distinguishable
+	convention: wrap the module with a <div> with id = module_name_div, example:
+	module:
+		<div id="add_user_div">
+		</div>
+	css:
+		#add_user_div{
+			width: etc...
+		}
+[ ] Write a simple form in add_user module that asks for a username and password
+	username details:
+		input type=text min=6, max=16, pattern=[a-zA-Z0-9]{6,16}, required
+	password details:
+		input type=password min=8, max=16, pattern=[a-zA-Z]*[0-9][a-zA-Z0-9], required
+	set the form action to '#'
+	optional : style the form
+[ ] Write a simple table in view_users with the following data:
+	username		password
+	raven			a66483fb374daaef2c09ca1d24ee152a
+	john			907e131eb3bf6f21292fa1ed16e8b60c
+	optional : style the table
+
+	
+-- BACK-END
+	
+	
+[ ] import exer.sql using CLI (Command-Line Interface) // mysql -u<username> -p < exer.sql // default username is root, so -uroot
+[ ] edit MySQL credentials in bin/Config.php
+[ ] study how stored procedure works and how to create a stored procedure
+[ ] write a simple stored procedure named VIEW_USERS that returns "No data" if the users table is empty else return the table data
+	and ADD_USER procedure that accepts two parameters, _username VARCHAR(16) and _password VARCHAR(40)
+		checks if username already exists
+			if true, return "Username already taken." as message and 123 as error
+			else insert the username and password to users table, dont forget to encrypt the password with md5+sha1
+[ ] create a very simple API named "view_users" that calls the VIEW_USERS procedure
+[ ] create an API that accepts parameters from POST, validates the parameters (mysqli_escape_string + check strlen),  and calls the ADD_USER procedure
+
+
+-- BOTH-END INTEGRATION
+
+
+[ ] integrate the created APIs to your modules by using API::execute
+[ ] convert the add_user operation to AJAX, using JQuery AJAX
+[ ] if a user is added, update the view_users module, append the added user using JavaScript
+
+
+[ ] git add .
+[ ] git commit -m "Finished the tutorial at last! :D"
+[ ] git push https://github.com/ravenjohn/VERSION_AB5L_GROUP1.git
+

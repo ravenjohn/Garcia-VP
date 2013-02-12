@@ -14,9 +14,8 @@
 			$_SESSION['messages'][] = $message;
 		
 			if(	(!RConfig::log		//log unnecessary
-				|| $api=="admin/get_score"
-				|| $api=="judge/get_stash"
-				|| $api=="team/get_notifs")
+				// || $api=="admin/poll"
+				)
 				&& $mode!='E'
 			) return;
 			

@@ -3,11 +3,7 @@
 	session_start();
 	foreach(glob("bin/*.php") as $file) include $file;
 	$modules = array();
-	// $modules[] = array("name"=>"header","position"=>"header");
-	// $modules[] = array("name"=>"banner","position"=>"banner");
-	// $modules[] = array("name"=>"featured","position"=>"featured");
-	// $modules[] = array("name"=>"main","position"=>"main");
-	// $modules[] = array("name"=>"footer","position"=>"footer");
+	$modules[] = array("name"=>"add_package","position"=>"main");
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->

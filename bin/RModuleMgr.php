@@ -10,12 +10,12 @@
 	
 		public static function renderModules($modules,$position){
 			foreach($modules as $module)
-				if(file_exists('modules/'.$module['name']."/tmpl/index.php")){
-					if($module['position'] == $position)
+				if($module['position'] == $position){
+					if(file_exists('modules/'.$module['name']."/tmpl/index.php"))
 						include 'modules/'.$module['name']."/tmpl/index.php";
+					else
+						echo "Module \"".$module['name']."\" not found.<br />";
 				}
-				else
-					echo "Module \"".$module['name']."\" not found.<br />";
 		}
 		
 		public static function renderScripts(){
