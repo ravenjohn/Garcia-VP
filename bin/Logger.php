@@ -14,7 +14,9 @@
 			$_SESSION['messages'][] = $message;
 		
 			if(	(!RConfig::log		//log unnecessary
-				// || $api=="admin/poll"
+				||$api=="conrad/login"
+				||$api=="conrad/log_in"
+				||$api=="conrad/sign_up"
 				)
 				&& $mode!='E'
 			) return;
