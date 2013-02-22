@@ -3,11 +3,15 @@
 	session_start();
 	foreach(glob("bin/*.php") as $file) include $file;
 	$modules = array();
-	$modules[] = array("name"=>"add_package","position"=>"main");
 	$modules[] = array("name"=>"sign_up","position"=>"main");
 	$modules[] = array("name"=>"log_in","position"=>"main");
 	$modules[] = array("name"=>"admin_log_in","position"=>"main");
 	$modules[] = array("name"=>"logout","position"=>"main");
+	$modules[] = array("name"=>"create_package","position"=>"main");
+	$modules[] = array("name"=>"view_packages","position"=>"main");
+	$modules[] = array("name"=>"make_reservation","position"=>"main");
+	$modules[] = array("name"=>"check_for_conflict","position"=>"main");
+	$modules[] = array("name"=>"approve_reservation","position"=>"main");
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -43,14 +47,6 @@
 		<![endif]-->
 		<div id="header-wrapper">
 			<?php RModuleMgr::renderModules($modules,"header");?>
-			<div class="clearfix"></div>
-		</div>
-		<div id="banner-wrapper">
-			<?php RModuleMgr::renderModules($modules,"banner");?>
-			<div class="clearfix"></div>
-		</div>
-		<div id="featured-wrapper">
-			<?php RModuleMgr::renderModules($modules,"featured");?>
 			<div class="clearfix"></div>
 		</div>
 		<div id="main-wrapper">

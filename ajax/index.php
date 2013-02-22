@@ -35,5 +35,22 @@
 		//LOG
 		header('Location: '.RConfig::app_url);
 	}
+	else if(isset($_GET['create_package'])){
+		print_r(json_encode(API::execute("karla/create_package",$_POST)));
+	}
+	else if(isset($_GET['delete_package'])){
+		print_r(json_encode(API::execute("karla/delete_package",$_POST)));
+	}
+	else if(isset($_GET['make_reservation'])){
+		print_r(json_encode(API::execute("marian/make_reservation",$_POST)));
+	}else if(isset($_GET['check_for_conflict'])){
+		print_r(json_encode(API::execute("jom/check_for_conflict",$_POST)));
+	}else if(isset($_GET['view_pending'])){
+		print_r(json_encode(API::execute("jom/view_pending",$_POST)));
+	}else if(isset($_GET['find_similar'])){
+		print_r(json_encode(API::execute("jom/find_similar",$_POST)));
+	}else if(isset($_GET['approve_reservation'])){
+		print_r(json_encode(API::execute("jom/approve_reservation",$_POST)));
+	}
 	else{?><h1>You are not allowed to use this API.</h1><?php }
 ?>
