@@ -6,7 +6,7 @@
  * Block comments will be automatically deleted
  */
  
- function make_reservation(f){
+function create_package(f){
 	var f = f;
 	$.post($(f).attr('action'), $(f).serialize(),
 		function (data, textStatus, jqXHR){

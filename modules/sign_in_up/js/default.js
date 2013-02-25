@@ -16,7 +16,9 @@ function validateLogin(f){
 				}else{
 					$("#sign_in_up_div").hide();
 					$("#logout_div").show();
+					$("#view_packages_div").show();
 					$("#make_reservation_div").show();
+					$("#view_reservations_div").show();
 				}
 			}else{
 				alert("Something went wrong :(");

@@ -15,6 +15,7 @@ function adminValidateLogin(f){
 				}else{
 					$('#admin_log_in_div').hide();
 					$("#logout_div").show();
+					$("#create_package_div").show();
 				}
 				console.log(data);
 			}else{

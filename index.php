@@ -7,7 +7,12 @@
 	$modules[] = array("name"=>"menu","position"=>"main");
 	$modules[] = array("name"=>"gallery","position"=>"main");
 	$modules[] = array("name"=>"logout","position"=>"main");
+	$modules[] = array("name"=>"create_package","position"=>"main");
+	$modules[] = array("name"=>"view_packages","position"=>"main");
 	$modules[] = array("name"=>"make_reservation","position"=>"main");
+	$modules[] = array("name"=>"view_reservations","position"=>"main");
+	$modules[] = array("name"=>"cancel_reservation","position"=>"main");
+	
 	if(isset($_GET['admin'])){	//modules ng admin
 		$modules[] = array("name"=>"admin_login","position"=>"main");
 	}else{
