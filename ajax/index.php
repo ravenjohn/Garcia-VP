@@ -34,5 +34,8 @@
 	else if(isset($_GET['create_package'])){
 		print_r(json_encode(API::execute("karla/create_package",$_POST)));
 	}
+	else if(isset($_GET['delete_package'])){
+		print_r(json_encode(API::execute("karla/delete_package",$_GET)));
+	}
 	else{?><h1>You are not allowed to use this API.</h1><?php }
 ?>
