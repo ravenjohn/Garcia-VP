@@ -31,5 +31,8 @@
 		session_destroy();
 		header('Location: '.RConfig::app_url);
 	}
+	else if(isset($_GET['make_reservation'])){
+		print_r(json_encode(API::execute("marian/make_reservation",$_POST)));
+	}
 	else{?><h1>You are not allowed to use this API.</h1><?php }
 ?>
