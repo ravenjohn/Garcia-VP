@@ -21,12 +21,12 @@
 		public static function renderScripts(){
 			if(RConfig::replaceCSS){
 				$js = "";
-				foreach(glob("static/js/*") as $file)
+				foreach(glob("static/js/*.js") as $file)
 					$js.=file_get_contents($file);
 				foreach(glob("modules/*") as $file)
 					if(file_exists($file."/js/default.js"))
 						$js.=file_get_contents($file."/js/default.js");
-				$js = RModuleMgr::minifyJS($js);
+				// $js = RModuleMgr::minifyJS($js);
 				$f = fopen("_auto/auto.min.js",'w');
 				fwrite($f,$js);
 				fclose($f);
@@ -37,7 +37,7 @@
 		public static function renderStyles(){
 			if(RConfig::replaceJS){
 				$css = "";
-				foreach(glob("static/css/*") as $file)
+				foreach(glob("static/css/*.css") as $file)
 					$css.=file_get_contents($file);
 				foreach(glob("modules/*") as $file)
 					if(file_exists($file."/css/default.css"))

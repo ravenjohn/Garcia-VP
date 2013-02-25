@@ -13,9 +13,11 @@
 		
 			$_SESSION['messages'][] = $message;
 		
-			if(	(!RConfig::log		//log unnecessary
-				||$api=="conrad/login"
-				||$api=="conrad/log_in"
+			if(	(!RConfig::log		//log confidential
+				||$api=="conrad/admin_login"
+				||$api=="conrad/admin_change_password"
+				||$api=="conrad/user_login"
+				||$api=="conrad/user_change_password"
 				||$api=="conrad/sign_up"
 				)
 				&& $mode!='E'
