@@ -3,11 +3,15 @@
 	session_start();
 	foreach(glob("bin/*.php") as $file) include $file;
 	$modules = array();
-	$modules[] = array("name"=>"add_package","position"=>"main");
-	$modules[] = array("name"=>"sign_up","position"=>"main");
-	$modules[] = array("name"=>"log_in","position"=>"main");
-	$modules[] = array("name"=>"admin_log_in","position"=>"main");
+	$modules[] = array("name"=>"header","position"=>"header");
+	$modules[] = array("name"=>"menu","position"=>"main");
+	$modules[] = array("name"=>"gallery","position"=>"main");
 	$modules[] = array("name"=>"logout","position"=>"main");
+	if(isset($_GET['admin'])){	//modules ng admin
+		$modules[] = array("name"=>"admin_login","position"=>"main");
+	}else{
+		$modules[] = array("name"=>"sign_in_up","position"=>"main");
+	}
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -21,6 +25,7 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 		<link rel="author" href="humans.txt">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
 		<?php RModuleMgr::renderStyles();?>
 		<link rel="apple-touch-icon-precomposed" href="static/img/apple-touch-icon.png">
 		<link rel="apple-touch-icon-precomposed" href="static/img/apple-touch-icon-precomposed.png">
@@ -41,26 +46,20 @@
 		<!--[if lt IE 7]>
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
-		<div id="header-wrapper">
-			<?php RModuleMgr::renderModules($modules,"header");?>
-			<div class="clearfix"></div>
-		</div>
-		<div id="banner-wrapper">
-			<?php RModuleMgr::renderModules($modules,"banner");?>
-			<div class="clearfix"></div>
-		</div>
-		<div id="featured-wrapper">
-			<?php RModuleMgr::renderModules($modules,"featured");?>
-			<div class="clearfix"></div>
-		</div>
-		<div id="main-wrapper">
-			<?php RModuleMgr::renderModules($modules,"main");?>
-			<div class="clearfix"></div>
-		</div>
-		<div id="footer-wrapper">
-			<?php RModuleMgr::renderModules($modules,"footer");?>
-			<div class="clearfix"></div>
-		</div>		
+		<section id="app_div">
+			<header>
+				<?php RModuleMgr::renderModules($modules,"header");?>
+				<div class="clearfix"></div>
+			</header>
+			<div id="main_div">
+				<?php RModuleMgr::renderModules($modules,"main");?>
+				<div class="clearfix"></div>
+			</div>
+			<footer>
+				<?php RModuleMgr::renderModules($modules,"footer");?>
+				<div class="clearfix"></div>
+			</footer>		
+		</section>
 		<?php RModuleMgr::renderScripts();?>
 	</body>
 </html>
