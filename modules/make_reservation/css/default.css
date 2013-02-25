@@ -1,0 +1,14 @@
+/* This is where you will style your module
+ * always start with your wrapper div like:
+ * #module_name_div{
+ * 		style...
+ * }
+ * #module_name_div ul li{
+ * 		style...
+ * }
+ * Block comments will be automatically deleted
+ */
+ 
+ #make_reservation_div{
+	display: none;
+ }
