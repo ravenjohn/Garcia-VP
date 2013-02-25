@@ -30,5 +30,6 @@ create table __reservations(
 	startDate DATETIME NOT NULL,
 	endDate DATETIME NOT NULL,
 	location VARCHAR(100) NOT NULL,
-	additionalRequest VARCHAR(1000)
+	additionalRequest VARCHAR(1000),
+	status VARCHAR(64)
 );
