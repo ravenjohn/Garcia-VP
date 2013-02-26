@@ -31,5 +31,8 @@
 		session_destroy();
 		header('Location: '.RConfig::app_url);
 	}
+	else if(isset($_GET['create_package'])){
+		print_r(json_encode(API::execute("karla/create_package",$_POST)));
+	}
 	else{?><h1>You are not allowed to use this API.</h1><?php }
 ?>
