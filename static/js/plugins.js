@@ -1,4 +1,4 @@
-(function() {
+; (function() {
     var method;
     var noop = function () {};
     var methods = [
