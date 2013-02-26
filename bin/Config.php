@@ -10,10 +10,10 @@
 		const app_version = "1.0";
 		const app_copyright = "Copyright 2013";
 
-		const app_url = "http://localhost/VERSION_AB5L_GROUP1/";
+		const app_url = "http://localhost/VERSION_AB5L_GROUP1_new/";
 		const ajax_url = "ajax/?";
 
-		const logs_path = "C://xampp/htdocs/VERSION_AB5L_GROUP1/_logs/";
+		const logs_path = "C://xampp/htdocs/VERSION_AB5L_GROUP1_new/_logs/";
 
 		const log = true;
 		const replaceCSS = true;
