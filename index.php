@@ -7,9 +7,10 @@
 	$modules[] = array("name"=>"menu","position"=>"main");
 	$modules[] = array("name"=>"gallery","position"=>"main");
 	$modules[] = array("name"=>"logout","position"=>"main");
-	$modules[] = array("name"=>"create_package","position"=>"main");
 	if(isset($_GET['admin'])){	//modules ng admin
-		$modules[] = array("name"=>"admin_login","position"=>"main");
+	$modules[] = array("name"=>"admin_login","position"=>"main");
+	$modules[] = array("name"=>"create_package","position"=>"main");
+	$modules[] = array("name"=>"delete_package","position"=>"main");
 	}else{
 		$modules[] = array("name"=>"sign_in_up","position"=>"main");
 	}
