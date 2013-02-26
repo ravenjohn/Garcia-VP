@@ -5,8 +5,9 @@
 	
 	if(isset($_GET['admin_login'])){
 		$result = API::execute('conrad/admin_login',$_POST);
-		if(empty($result['data']))
+		if(empty($result['data'])){
 			echo "0";
+		}
 		else{
 			$_SESSION['username'] = $_POST['username'];
 			$_SESSION['role'] = 'admin';
