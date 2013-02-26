@@ -1,11 +1,4 @@
 $(function() {
-	/**
-	* for each menu element, on mouseenter, 
-	* we enlarge the image, and show both sdt_active span and 
-	* sdt_wrap span. If the element has a sub menu (sdt_box),
-	* then we slide it - if the element is the last one in the menu
-	* we slide it to the left, otherwise to the right
-	*/
 	$('#sdt_menu > li').bind('mouseenter',function(){
 		var $elem = $(this);
 		$elem.find('img')
@@ -61,3 +54,16 @@ $('#relatedPosts').toggle(
 	);
 	$('#rp_list a').tipsy({gravity: 's'});
 });
+
+
+
+
+mods = $('.mod');
+console.log(mods);
+function fadeMod(i){
+	if(i == mods.length) return;
+	$(mods[i]).fadeIn(1000, function(){
+		fadeMod(i+1);
+	});
+}
+fadeMod(0);

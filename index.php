@@ -25,7 +25,7 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="author" href="humans.txt">
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 		<?php RModuleMgr::renderStyles();?>
 		<link rel="apple-touch-icon-precomposed" href="static/img/apple-touch-icon.png">
 		<link rel="apple-touch-icon-precomposed" href="static/img/apple-touch-icon-precomposed.png">

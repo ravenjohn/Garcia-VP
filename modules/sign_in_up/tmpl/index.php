@@ -1,32 +1,6 @@
-<div id="sign_in_up_div">
+<div id="sign_in_up_div" class="mod">
 	<div class="span3 module">
 		<div class="accordion" id="accordion2">
-		
-			<div class="accordion-group">
-				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-						SIGN IN!
-					</a>
-				</div>
-				<div class="triangle-l"></div>
-				<div class="triangle-r"></div>
-				<div id="collapseOne" class="accordion-body collapse in">
-					<div class="accordion-inner">
-						<form method="POST" action="<?php echo RConfig::ajax_url; ?>user_login" onsubmit="return validateLogin(this)" class="form form-vertical">
-							<div class="input-prepend">
-								<span class="add-on"><i class="icon-user"></i></span>
-								<input type="text" name="username" max="16" pattern="[a-zA-Z0-9@\.]{6,16}" required="required" placeholder="Username"/>
-							</div>
-							<div class="input-prepend">
-								<span class="add-on"><i class="icon-lock"></i></span>
-								<input type="password" name="password" max="16" required="required" placeholder="Password"/>
-							</div>
-							<small><a href="#">I forgot my password :'(</a></small><br />
-							<button type="submit" class="btn btn-large btn-primary">LOGIN!</button>
-						</form>
-					</div>
-				</div>
-			</div>
 			
 			<div class="accordion-group">
 				<div class="accordion-heading">
@@ -34,8 +8,6 @@
 						SIGN UP!
 					</a>
 				</div>
-				<div class="triangle-l"></div>
-				<div class="triangle-r"></div>
 				<div id="collapseTwo" class="accordion-body collapse">
 					<div class="accordion-inner">
 						<form method="POST" action="<?php echo RConfig::ajax_url?>sign_up" onsubmit="return sign_up(this)" class="form form-vertical">
@@ -80,12 +52,35 @@
 					</div>
 				</div>
 			</div>
+		
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+						SIGN IN!
+					</a>
+				</div>
+				<div id="collapseOne" class="accordion-body collapse in">
+					<div class="accordion-inner">
+						<form method="POST" action="<?php echo RConfig::ajax_url; ?>user_login" onsubmit="return validateLogin(this)" class="form form-vertical">
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-user"></i></span>
+								<input type="text" name="username" max="16" pattern="[a-zA-Z0-9@\.]{6,16}" required="required" placeholder="Username"/>
+							</div>
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-lock"></i></span>
+								<input type="password" name="password" max="16" required="required" placeholder="Password"/>
+							</div>
+							<small><a href="#">I forgot my password :'(</a></small><br />
+							<button type="submit" class="btn btn-large btn-primary">LOGIN!</button>
+						</form>
+					</div>
+				</div>
+			</div>
 			
 		</div>
 	</div>
-	<div class="span9" id="introDiv">
+	<div class="span9 module" id="introDiv">
 		<h1>Let us capture the best parts of your life!</h1>
-		<br />
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero eget arcu consequat ullamcorper. Curabitur justo lectus, ullamcorper ac tristique nec, facilisis id augue. Nullam luctus enim nec tellus aliquam ut dapibus ligula semper.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero eget arcu consequat ullamcorper. Curabitur justo lectus, ullamcorper ac tristique nec, facilisis id augue. Nullam luctus enim nec tellus aliquam ut dapibus ligula semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero eget arcu consequat ullamcorper. Curabitur justo lectus, ullamcorper ac tristique nec, facilisis id augue. Nullam luctus enim nec tellus aliquam ut dapibus ligula semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero eget arcu consequat ullamcorper. Curabitur justo lectus, ullamcorper ac tristique nec, facilisis id augue. Nullam luctus enim nec tellus aliquam ut dapibus ligula semper.</p>
 	</div>
 </div>
