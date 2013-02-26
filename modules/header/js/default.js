@@ -5,3 +5,4 @@ $(".menu").click(function(e){
 $("#loginPopUp").click(function(e){
 	$("#login_div").show();
 });
+$('#header_div').fadeIn(3000);

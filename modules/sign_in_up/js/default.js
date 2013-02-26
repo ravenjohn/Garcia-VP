@@ -37,3 +37,8 @@ function sign_up(f){
 	);
 	return false;
 }
+$('.tooltipped').tooltip();
+$('.text-tooltip').tooltip();
+$('.text-tooltip').focus(function(){
+	$(this).tooltip('show');
+});

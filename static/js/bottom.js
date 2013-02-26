@@ -1,4 +1,11 @@
 $(function() {
+	/**
+	* for each menu element, on mouseenter, 
+	* we enlarge the image, and show both sdt_active span and 
+	* sdt_wrap span. If the element has a sub menu (sdt_box),
+	* then we slide it - if the element is the last one in the menu
+	* we slide it to the left, otherwise to the right
+	*/
 	$('#sdt_menu > li').bind('mouseenter',function(){
 		var $elem = $(this);
 		$elem.find('img')
@@ -44,69 +51,13 @@ $(function() {
 			 .stop(true)
 			 .animate({'top':'25px'},500);
 	});
-});
-$(function() {
-
-	var Page = (function() {
-
-		var $nav = $( '#nav-dots > span' ),
-			slitslider = $( '#slider' ).slitslider( {
-				onBeforeChange : function( slide, pos ) {
-
-					$nav.removeClass( 'nav-dot-current' );
-					$nav.eq( pos ).addClass( 'nav-dot-current' );
-
-				}
-			} ),
-
-			init = function() {
-
-				initEvents();
-				
-			},
-			initEvents = function() {
-
-				$nav.each( function( i ) {
-				
-					$( this ).on( 'click', function( event ) {
-						
-						var $dot = $( this );
-						
-						if( !slitslider.isActive() ) {
-
-							$nav.removeClass( 'nav-dot-current' );
-							$dot.addClass( 'nav-dot-current' );
-						
-						}
-						
-						slitslider.jump( i + 1 );
-						return false;
-					
-					} );
-					
-				} );
-
-			};
-
-			return { init : init };
-
-	})();
-
-	Page.init();
-
-	/**
-	 * Notes: 
-	 * 
-	 * example how to add items:
-	 */
-
-	/*
-	
-	var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
-	
-	call the plugin's add method
-	ss.add($items);
-
-	*/
-
+$('#relatedPosts').toggle(
+		function(){
+			$('#rp_list').animate({'bottom':'10px'},500);
+		},
+		function(){
+			$('#rp_list').animate({'bottom':'-50px'},500);
+		}
+	);
+	$('#rp_list a').tipsy({gravity: 's'});
 });

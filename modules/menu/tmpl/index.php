@@ -1,4 +1,4 @@
-<div id="menu_div">
+<div id="menu_div" class="module">
 	<ul id="sdt_menu" class="sdt_menu">
 		<li>
 			<a href="#">
@@ -11,7 +11,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="#">
+			<a href="#" onclick="showGallery()">
 				<img src="static/img/menu/1.jpg" alt=""/>
 				<span class="sdt_active"></span>
 				<span class="sdt_wrap">
