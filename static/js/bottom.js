@@ -1,3 +1,19 @@
+function fadeInMods(mods, i){
+	if(i == mods.length) return;
+	$(mods[i]).fadeIn("fast", function(){
+		fadeInMods(mods, i+1);
+	});
+}
+function fadeMods(mods, i, mods2){
+	if(i == mods.length){
+		fadeInMods(mods2, 0);
+		return;
+	}
+	$(mods[i]).fadeOut("fast", function(){
+		fadeMods(mods, i+1, mods2);
+	});
+}
+
 $(function() {
 	$('#sdt_menu > li').bind('mouseenter',function(){
 		var $elem = $(this);
@@ -54,16 +70,3 @@ $('#relatedPosts').toggle(
 	);
 	$('#rp_list a').tipsy({gravity: 's'});
 });
-
-
-
-
-mods = $('.mod');
-console.log(mods);
-function fadeMod(i){
-	if(i == mods.length) return;
-	$(mods[i]).fadeIn(1000, function(){
-		fadeMod(i+1);
-	});
-}
-fadeMod(0);

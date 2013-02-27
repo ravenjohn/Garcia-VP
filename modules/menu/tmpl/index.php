@@ -1,4 +1,4 @@
-<div id="menu_div" class="mod">
+<div id="menu_div" class="mod module">
 	<div class="module">
 		<ul id="sdt_menu" class="sdt_menu">
 			<li>
