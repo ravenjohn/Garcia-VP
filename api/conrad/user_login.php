@@ -9,5 +9,4 @@
 		$error_message = "Request is missing required parameter(s)";
 	}else $input = API::sanitize($link,$input);
 
-	$query = "SELECT * FROM __users WHERE (username='$input[0]' OR email='$input[0]') AND password=sha1(MD5('$input[1]'));"
-?>
+	$query = "SELECT * FROM __users WHERE (username='$input[0]' OR email='$input[0]') AND password=sha1(MD5('$input[1]'));";

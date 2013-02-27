@@ -11,16 +11,13 @@ function validateLogin(f){
 		function(data, textStatus, jqXHR) {
 			if(jqXHR.status==200){
 				console.log(data);
-				if(data=="0"){
+				if(data=="0")
 					alert("Incorrect username or password");
-				}else{
-					$("#sign_in_up_div").hide();
-					$("#logout_div").show();
-					$("#make_reservation_div").show();
-				}
-			}else{
-				alert("Something went wrong :(");
+				else
+					fadeMods($('.logout_module'),0,$('.user_module'));
 			}
+			else
+				alert("Something went wrong :(");
 		}
 	);
 	return false;
@@ -38,3 +35,8 @@ function sign_up(f){
 	);
 	return false;
 }
+$('.tooltipped').tooltip();
+$('.text-tooltip').tooltip();
+$('.text-tooltip').focus(function(){
+	$(this).tooltip('show');
+});

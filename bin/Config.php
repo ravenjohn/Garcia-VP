@@ -18,6 +18,9 @@
 		const log = true;
 		const replaceCSS = true;
 		const replaceJS = true;
+
+		const minifyCSS = true;
+		const minifyJS = false;
 		
 		const DB_HOST = "localhost";
 		const DB_NAME = "garciadb";
