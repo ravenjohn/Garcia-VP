@@ -2,11 +2,9 @@
 	$result = API::execute('jom/view_pending',array());
 	$conflict = API::execute('jom/check_for_conflict',array()); 
 	$similar = API::execute('jom/find_similar', array());  
-	
-	
 ?>
 
-<div id="check_for_conflict_div">
+<div id="check_for_conflict_div" class="mod admin_module">
 <h3>Check for Conflict</h3>
  <br />
  <form method="POST" class="form ">

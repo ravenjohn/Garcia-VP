@@ -1,7 +1,7 @@
 <?php
 	defined('AUTH') or die;
 	
-	$input[] = $_GET['id'];
+	$input[] = $_POST['id'];
 
 	if(API::checkEmpty($input)){
 		$error = true;

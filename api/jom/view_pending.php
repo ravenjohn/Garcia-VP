@@ -1,5 +1,3 @@
 <?php
 	defined('AUTH') or die;
-	
-	$query = "CALL VIEW_PENDING();";
-?>
+	$query = "SELECT * FROM __reservations WHERE status LIKE '%pending%';";
