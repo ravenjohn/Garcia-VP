@@ -8,14 +8,12 @@
 
 	final class RModuleMgr{
 	
-		public static function renderModules($modules,$position){
+		public static function renderModules($modules){
 			foreach($modules as $module)
-				if($module['position'] == $position){
-					if(file_exists('modules/'.$module['name']."/tmpl/index.php"))
-						include 'modules/'.$module['name']."/tmpl/index.php";
-					else
-						echo "Module \"".$module['name']."\" not found.<br />";
-				}
+				if(file_exists('modules/'.$module."/tmpl/index.php"))
+					include 'modules/'.$module."/tmpl/index.php";
+				else
+					echo "Module \"".$module."\" not found.<br />";
 		}
 		
 		public static function renderScripts(){
@@ -26,7 +24,15 @@
 				foreach(glob("modules/*") as $file)
 					if(file_exists($file."/js/default.js"))
 						$js.=file_get_contents($file."/js/default.js");
-				// $js = RModuleMgr::minifyJS($js);
+				$mode = "logout_module";
+				if(isset($_SESSION['role'])){
+					if($_SESSION['role'] == "admin")
+						$mode = "admin_module";
+					else if($_SESSION['role'] == "user")
+						$mode = "user_module";
+				}
+				$js.="fadeInMods($('.module, .".$mode."'),0);";
+				if(RConfig::minifyJS) $js = RModuleMgr::minifyJS($js);
 				$f = fopen("_auto/auto.min.js",'w');
 				fwrite($f,$js);
 				fclose($f);
@@ -43,7 +49,7 @@
 					if(file_exists($file."/css/default.css"))
 						$css.=file_get_contents($file."/css/default.css");
 				$css.=file_get_contents("static/css/custom.css");
-				$css = RModuleMgr::minifyCSS($css);
+				if(RConfig::minifyCSS) $css = RModuleMgr::minifyCSS($css);
 				$f = fopen("_auto/auto.min.css",'w');
 				fwrite($f, $css);
 				fclose($f);

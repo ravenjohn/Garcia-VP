@@ -1,22 +1,27 @@
-<?php
-	$packages = API::execute("karla/read_packages",array());
-?>
-<div id="view_packages_div">
-	<table class="table table-bordered" id="view_packages_table">
-		<?php
-		if(empty($packages['items'])){ ?>
+<?php if(!isset($packages)) $packages = API::execute("karla/read_packages",array());?>
+<div id="view_packages_div" class="mod module span9">
+	<div class="gradient">
+		<table class="table table-bordered" class="view_packages_table">
+			<tr>
+				<th>Category</th>
+				<th>Name</th>
+				<th>Cost</th>
+				<th>Action</th>
+			</tr>
+			<?php if(empty($packages['items'])){ ?>
 			<tr class="remove">
 				<th colspan="3">No packages to display . . .  :( </th>
 			</tr>
-		<?php
-		}else{
-			foreach($packages['data'] as $p){?>
-			<tr>
-				<td><?php echo $p['name']; ?></td>
-				<td><?php echo $p['cost']; ?></td>
-				<td><a href="<?php echo RConfig::ajax_url; ?>" id="<?php echo $p['name']; ?>" onclick="return delete_package(this);"> X </a></td>
-			</tr>
-		<?php }
-		}?>
-	</table>
+			<?php }else{?>
+				<?php foreach($packages['data'] as $p){?>
+				<tr>
+					<td><?php echo $p['category']; ?></td>
+					<td><?php echo $p['name']; ?></td>
+					<td><?php echo $p['cost']; ?></td>
+					<td><button type="button" class="btn btn-success" onclick="$('#packageName_temp').val('<?php echo $p['name']?>');"><i class="icon-shopping-cart"></i></button></td>
+				</tr>
+				<?php }?>
+			<?php	}?>
+		</table>
+	</div>
 </div>

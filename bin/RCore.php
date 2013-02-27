@@ -39,26 +39,30 @@
 					$input = array();
 					$_POST = array_merge($_POST,$params);
 					include $file;
-					$_results = $link->query($query);
-					$ar = explode(' ',$query);
-					if($link->error)	//check if query has an error
-						$result['error'] = $link->error;
-					else if (
-					(strcasecmp($ar[0],'CALL')==0 ||
-					strcasecmp($ar[0],'SELECT')==0) &&
-					$_results->num_rows > 0) {	//process data
-						while($row=$_results->fetch_assoc())
-							$result['data'][] = $row;	//init data
-						if(isset($result['data'][0]['message']))	//init message if set
-							$result['message'] = $result['data'][0]['message'];
-						else
-							$result['message'] = 'Query successful.';
-						$result['items'] = $_results->num_rows;	//init items
-						mysqli_free_result($_results);
-					} else {	//if there's no data from database
-						$result['items'] = 0;
-						$result['message'] = 'Query sucessful.';
-					}					
+					if(!isset($error) || !$error){
+						$_results = $link->query($query);
+						$ar = explode(' ',$query);
+						if($link->error)	//check if query has an error
+							$result['error'] = $link->error;
+						else if (
+						(strcasecmp($ar[0],'CALL')==0 ||
+						strcasecmp($ar[0],'SELECT')==0) &&
+						$_results->num_rows > 0) {	//process data
+							while($row=$_results->fetch_assoc())
+								$result['data'][] = $row;	//init data
+							if(isset($result['data'][0]['message']))	//init message if set
+								$result['message'] = $result['data'][0]['message'];
+							else
+								$result['message'] = 'Query successful.';
+							$result['items'] = $_results->num_rows;	//init items
+							mysqli_free_result($_results);
+						} else {	//if there's no data from database
+							$result['items'] = 0;
+							$result['message'] = 'Query sucessful.';
+						}
+					}else{
+						$result['error'] = $error_message;
+					}
 				}else $result['error'] = "$name: API does not exist";
 			}
 			if(!empty($link->error))
