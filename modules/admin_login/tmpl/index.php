@@ -1,7 +1,18 @@
-<div id="admin_log_in_div">
-	<form method="POST" action="<?php echo RConfig::ajax_url?>admin_login" onsubmit="return adminValidateLogin(this)">
-		<input type="text" name="username" min="6" max="16" pattern="[a-zA-Z0-9@\.]{6,16}" required="required" placeholder="Username..."/>
-		<input type="password" name="password" min="8" max="16" pattern="[a-zA-Z0-9]{8,16}" required="required" placeholder="Password..."/>
-		<input type="submit" name="login"/>
-	</form>
+<div id="admin_login_div" class="mod logout_module">
+	<br />
+	<div class="none pull-left" id="admin_login_form" name="admin_login_form">
+		<form method="POST" action="<?php echo RConfig::ajax_url?>admin_login" onsubmit="return adminValidateLogin(this)" class="form form-horizontal">
+			<div class="input-append input-prepend">
+				<span class="add-on"><i class="icon-user"></i></span>
+				<input type="text" name="username" max="16" required="required" placeholder="Username" id="admin_username"/>
+			</div><br />
+			<div class="input-append input-prepend">
+				<span class="add-on"><i class="icon-lock"></i></span>
+				<input type="password" name="password" max="16" required="required" placeholder="Password"/>
+			</div>
+			<input type="submit" class="none" style="height: 0; width: 0;"/>
+		</form>
+	</div>
+	<br />
+	<button class="pull-left" onclick="$('#admin_login_form').fadeToggle(); document.getElementById('admin_username').focus()"><?php echo RConfig::app_copyright;?></button>
 </div>

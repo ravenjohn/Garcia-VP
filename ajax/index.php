@@ -5,8 +5,9 @@
 	
 	if(isset($_GET['admin_login'])){
 		$result = API::execute('conrad/admin_login',$_POST);
-		if(empty($result['data']))
+		if(empty($result['data'])){
 			echo "0";
+		}
 		else{
 			$_SESSION['username'] = $_POST['username'];
 			$_SESSION['role'] = 'admin';
@@ -24,15 +25,19 @@
 		}
 	}
 	else if(isset($_GET['sign_up'])){
-		$result = API::execute('conrad/sign_up',$_POST);
-		print_r(json_encode($result));
+		print_r(json_encode(API::execute('conrad/sign_up',$_POST)));
 	}
 	else if(isset($_GET['logout'])){
 		session_destroy();
-		header('Location: '.RConfig::app_url);
+	}
+	else if(isset($_GET['create_package'])){
+		print_r(json_encode(API::execute("karla/create_package",$_POST)));
+	}
+	else if(isset($_GET['delete_package'])){
+		print_r(json_encode(API::execute("karla/delete_package",$_GET)));
 	}
 	else if(isset($_GET['make_reservation'])){
-		print_r(json_encode(API::execute("marian/make_reservation",$_POST)));
+		print_r(json_encode(API::execute("marian/make_reservation",$_GET)));
 	}
 	else{?><h1>You are not allowed to use this API.</h1><?php }
 ?>
