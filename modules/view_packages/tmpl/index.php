@@ -18,7 +18,7 @@
 					<td><?php echo $p['category']; ?></td>
 					<td><?php echo $p['name']; ?></td>
 					<td><?php echo $p['cost']; ?></td>
-					<td><button type="button" class="btn btn-success" onclick="$('#packageName_temp').val('<?php echo $p['name']?>');"><i class="icon-shopping-cart"></i></button></td>
+					<td><button type="button" class="btn btn-success" onclick="$('#packageName_temp').val('<?php echo $p['name']?>');$('#packageName_temp2').val('<?php echo $p['name']?>');"><i class="icon-shopping-cart"></i></button></td>
 				</tr>
 				<?php }?>
 			<?php	}?>

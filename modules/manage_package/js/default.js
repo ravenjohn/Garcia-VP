@@ -3,13 +3,13 @@ function create_package(f){
 		function(data,textStatus,jqXHR){
 			if(jqXHR.status==200){
 				data = JSON.parse(data);
-				$('.view_packages_table .remove').remove();
-				$('.view_packages_table').append("	\
+				$('#view_packages_table .remove').remove();
+				$('#view_packages_table tbody').append("	\
 				<tr>	\
 				<td>"+f.category.value+"</td>	\
 				<td>"+f.name.value+"</td>	\
 				<td>"+f.cost.value+"</td>	\
-				<td><button type='submit' class='btn btn-danger' onclick=\"delete_package_form.id.value="+data.data[0].id+";\"><i class='icon-trash'></i></button></td>	\
+				<td><button type=\"button\" class=\"btn btn-danger\" onclick=\"delete_package_form.id.value="+data.data[0].id+"; delete_package(this);\"><i class=\"icon-trash\"></i></button></td>	\
 				</tr>");
 				f.reset();
 			}

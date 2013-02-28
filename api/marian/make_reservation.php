@@ -1,12 +1,12 @@
 <?php
 	defined('AUTH') or die;
 	
-	if(!isset($_SESSION['username']) || $_SESSION['username']!='user'){
+	if(!isset($_SESSION['username']) || $_SESSION['role']!='user'){
 		$error = true;
 		$error_message = "Please login first to make a reservation";
-	}else{	
+	}else{
 		$input[] = $_SESSION['username'];
-		$input[] = $_POST['packageID'];
+		$input[] = $_POST['packageName'];
 		$input[] = $_POST['startDate'];
 		$input[] = $_POST['endDate'];
 		$input[] = $_POST['location'];

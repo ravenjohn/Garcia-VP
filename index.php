@@ -7,9 +7,9 @@
 	$modules[] = "menu";
 	$modules[] = "sign_in_up";
 	$modules[] = "logout";
-	// $modules[] = "manage_package";
+	$modules[] = "manage_package";
 	$modules[] = "manage_reservation";
-	$modules[] = "check_for_conflict";
+	// $modules[] = "check_for_conflict";
 	$modules[] = "admin_login";
 	$modules[] = "gallery";
 	$modules[] = "view_packages";

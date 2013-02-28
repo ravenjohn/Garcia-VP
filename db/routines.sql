@@ -56,13 +56,28 @@ DELIMITER ;
 
 DROP PROCEDURE IF EXISTS APPROVE_RESERVATION;
 DELIMITER $$
-CREATE PROCEDURE APPROVE_RESERVATION(_id INT(11), _username VARCHAR(16))
+CREATE PROCEDURE APPROVE_RESERVATION(_id INT(11))
 BEGIN
 	DECLARE _exists BOOLEAN DEFAULT FALSE;
 	SELECT COUNT(*) > 0 INTO _exists FROM __reservations r WHERE r.id = _id;
 	IF _exists THEN
 		UPDATE __reservations SET status = "APPROVED" WHERE id = _id;
-		SELECT CONCAT("Reservation ID #'", _id ,"' of  '", _username, "' is APPROVED!") as message, "1" as statusCode;
+		SELECT CONCAT("Reservation APPROVED!") as message, "1" as statusCode;
+	ELSE
+		SELECT "Still PENDING." as message, "0" as statusCode;
+	END IF;
+END $$
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS CANCEL_RESERVATION;
+DELIMITER $$
+CREATE PROCEDURE CANCEL_RESERVATION(_id INT(11))
+BEGIN
+	DECLARE _exists BOOLEAN DEFAULT FALSE;
+	SELECT COUNT(*) > 0 INTO _exists FROM __reservations r WHERE r.id = _id;
+	IF _exists THEN
+		UPDATE __reservations SET status = "CANCELLED" WHERE id = _id;
+		SELECT CONCAT("Reservation CANCELLED!") as message, "1" as statusCode;
 	ELSE
 		SELECT "Still PENDING." as message, "0" as statusCode;
 	END IF;
@@ -84,4 +99,3 @@ BEGIN
 	END IF;
 END $$
 DELIMITER ;
->>>>>>> 725f52d056d3c909728604d5c7a0a5f367e6eac9
