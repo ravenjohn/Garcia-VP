@@ -23,7 +23,7 @@
 	</div>
 	<div class="span9 gradient">
 		<form action="<?php echo RConfig::ajax_url?>delete_package" class="form" name="delete_package_form" method="POST">
-			<table class="table table-bordered" class="view_packages_table">
+			<table class="table table-bordered" class="view_packages_table" id="view_packages_table">
 				<tr>
 					<th>Category</th>
 					<th>Name</th>

@@ -23,14 +23,12 @@
 				<td><?php echo $p["location"]?></td>
 				<td><?php echo $p["additionalRequest"]?></td>
 				<td><?php echo $p["status"]?></td>
-				
 				<?php
 					foreach($conflict["data"] as $c){
 						if($p["id"] == $c["id"]){
 							echo "<td>CONFLICT!</td>";
 						}
 					}
-					
 					foreach($similar["data"] as $s){
 						if($p["id"] == $s["id"]){
 							echo "<td>CONFLICT! Similar dates.</td>";

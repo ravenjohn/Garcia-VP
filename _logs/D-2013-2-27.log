@@ -285,3 +285,198 @@
 8:47:49|::1|jom/view_pending|adminadmin|none|Query successful.
 8:47:49|::1|jom/view_pending|adminadmin|none|Query successful.
 8:47:49|::1|karla/read_packages|adminadmin|none|Query successful.
+9:47:35|127.0.0.1|karla/read_packages|anon|none|Query successful.
+9:47:45|127.0.0.1|karla/read_packages|anon|none|Query successful.
+9:54:36|127.0.0.1|karla/read_packages|anon|none|Query successful.
+9:55:02|127.0.0.1|karla/read_packages|anon|none|Query successful.
+9:57:29|127.0.0.1|jom/view_pending|anon|none|Query sucessful.
+9:57:29|127.0.0.1|jom/view_pending|anon|none|Query sucessful.
+9:57:29|127.0.0.1|jom/check_for_conflict|anon|none|No conflicts.
+9:57:29|127.0.0.1|jom/find_similar|anon|none| 
+9:57:29|127.0.0.1|karla/read_packages|anon|none|Query successful.
+9:58:13|127.0.0.1|jom/view_pending|anon|none|Query sucessful.
+9:58:13|127.0.0.1|jom/view_pending|anon|none|Query sucessful.
+9:58:13|127.0.0.1|jom/check_for_conflict|anon|none|No conflicts.
+9:58:13|127.0.0.1|jom/find_similar|anon|none| 
+9:58:13|127.0.0.1|karla/read_packages|anon|none|Query successful.
+10:02:35|127.0.0.1|jom/view_pending|anon|none|Query sucessful.
+10:02:35|127.0.0.1|jom/view_pending|anon|none|Query sucessful.
+10:02:35|127.0.0.1|jom/check_for_conflict|anon|none|No conflicts.
+10:02:35|127.0.0.1|jom/find_similar|anon|none| 
+10:02:35|127.0.0.1|karla/read_packages|anon|none|Query successful.
+10:05:25|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+10:05:25|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+10:05:25|127.0.0.1|jom/check_for_conflict|marianmarian|none|No conflicts.
+10:05:25|127.0.0.1|jom/find_similar|marianmarian|none| 
+10:05:25|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+10:06:27|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+10:06:28|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+10:06:28|127.0.0.1|jom/check_for_conflict|marianmarian|none|No conflicts.
+10:06:28|127.0.0.1|jom/find_similar|marianmarian|none| 
+10:06:28|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+10:08:35|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+10:08:35|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+10:08:35|127.0.0.1|jom/check_for_conflict|marianmarian|none|No conflicts.
+10:08:35|127.0.0.1|jom/find_similar|marianmarian|none| 
+10:08:35|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+10:10:04|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+10:10:04|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+10:10:04|127.0.0.1|jom/check_for_conflict|marianmarian|none|No conflicts.
+10:10:04|127.0.0.1|jom/find_similar|marianmarian|none| 
+10:10:04|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+10:10:24|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+10:10:24|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+10:10:24|127.0.0.1|jom/check_for_conflict|marianmarian|none|No conflicts.
+10:10:24|127.0.0.1|jom/find_similar|marianmarian|none| 
+10:10:24|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+10:10:34|127.0.0.1|marian/make_reservation|marianmarian||Query sucessful.
+10:12:06|127.0.0.1|marian/make_reservation|marianmarian||Query sucessful.
+10:13:48|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:13:48|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:14:03|127.0.0.1|karla/create_package|admin|Photo Booth Packages,package1,5000|Query successful.
+10:14:27|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:14:27|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:15:21|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:15:21|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:15:28|127.0.0.1|karla/delete_package|admin||Package successfully deleted.
+10:15:33|127.0.0.1|karla/create_package|admin|Photo Booth Packages,asdfasf,asasdf|Query successful.
+10:15:36|127.0.0.1|karla/delete_package|admin||Package successfully deleted.
+10:15:42|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:15:42|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:17:38|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:17:38|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:17:42|127.0.0.1|karla/create_package|admin|Photo Booth Packages,asdf,asdfa|Query successful.
+10:17:47|127.0.0.1|karla/delete_package|admin||Package successfully deleted.
+10:17:49|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:17:49|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:18:03|127.0.0.1|karla/create_package|admin|Photo Booth Packages,sdfq,adsfadf|Query successful.
+10:18:39|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:18:39|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:18:44|127.0.0.1|karla/create_package|admin|Photo Booth Packages,asdfasdfadsf,asdfasdfasdfasdfasdf|Query successful.
+10:18:47|127.0.0.1|karla/delete_package|admin||Package successfully deleted.
+10:18:55|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:18:55|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:18:58|127.0.0.1|karla/delete_package|admin||Package successfully deleted.
+10:19:03|127.0.0.1|karla/create_package|admin|Photo Booth Packages,asdfasf,asdfasdf|Query successful.
+10:21:13|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:21:13|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:21:13|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:21:13|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:21:13|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:21:13|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:21:13|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:21:13|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:21:14|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:21:14|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:21:33|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:21:33|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:22:04|127.0.0.1|karla/create_package|admin|Photo Booth Packages,asdfasdf,asdfadsf|Query successful.
+10:22:21|127.0.0.1|karla/delete_package|admin||Package successfully deleted.
+10:22:26|127.0.0.1|karla/create_package|admin|Photo Booth Packages,asdfadsf,sadfasdfasdfad|Query successful.
+10:22:29|127.0.0.1|karla/delete_package|admin||Package successfully deleted.
+10:22:55|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:22:55|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:23:18|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:23:18|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:30:42|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:30:42|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:30:46|127.0.0.1|jom/approve_reservation|admin|1|Reservation APPROVED!
+10:31:48|127.0.0.1|marian/cancel_reservation|admin|2|Reservation APPROVED!
+10:32:20|127.0.0.1|marian/cancel_reservation|admin|2|Reservation CANCELLED!
+10:35:51|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:35:51|127.0.0.1|jom/view_pending|admin|none|Query sucessful.
+10:35:51|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+10:35:51|127.0.0.1|jom/find_similar|admin|none| 
+10:35:51|127.0.0.1|jom/view_pending|admin|none|Query sucessful.
+10:36:24|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:36:24|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:36:24|127.0.0.1|jom/check_for_conflict|admin|none|Query successful.
+10:36:24|127.0.0.1|jom/find_similar|admin|none|Query successful.
+10:36:24|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:40:03|127.0.0.1|karla/read_packages|anon|none|Query successful.
+10:40:03|127.0.0.1|jom/view_pending|anon|none|Query successful.
+10:40:03|127.0.0.1|jom/check_for_conflict|anon|none|Query successful.
+10:40:03|127.0.0.1|jom/find_similar|anon|none|Query successful.
+10:40:03|127.0.0.1|jom/view_pending|anon|none|Query successful.
+10:42:03|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:42:03|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:42:03|127.0.0.1|jom/check_for_conflict|admin|none|Query successful.
+10:42:03|127.0.0.1|jom/find_similar|admin|none|Query successful.
+10:42:03|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:43:26|127.0.0.1|marian/make_reservation|marianmarian|First Hour,2013-03-05,2013-03-06,lb,:)|Query sucessful.
+10:44:32|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:44:32|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:44:32|127.0.0.1|jom/check_for_conflict|admin|none|Query successful.
+10:44:32|127.0.0.1|jom/find_similar|admin|none|Query successful.
+10:44:33|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:45:00|127.0.0.1|jom/approve_reservation|admin|3|Reservation APPROVED!
+10:45:06|127.0.0.1|karla/read_packages|admin|none|Query successful.
+10:45:06|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:45:06|127.0.0.1|jom/check_for_conflict|admin|none|Query successful.
+10:45:06|127.0.0.1|jom/find_similar|admin|none|Query successful.
+10:45:06|127.0.0.1|jom/view_pending|admin|none|Query successful.
+10:52:36|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+10:53:22|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+10:53:22|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+10:53:22|127.0.0.1|jom/check_for_conflict|marianmarian|none|Query successful.
+10:53:22|127.0.0.1|jom/find_similar|marianmarian|none|Query successful.
+10:53:22|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+10:53:55|127.0.0.1|marian/cancel_reservation|marianmarian|1|Reservation CANCELLED!
+11:15:39|127.0.0.1|marian/make_reservation|marianmarian|Photo Service,2013-03-12,2013-02-12,lb,:)|Query sucessful.
+11:16:11|127.0.0.1|marian/make_reservation|marianmarian|Photo Service,2013-03-12,2013-03-13,lb,:)|Query sucessful.
+11:16:23|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+11:16:23|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+11:16:23|127.0.0.1|jom/check_for_conflict|marianmarian|none|Query successful.
+11:16:23|127.0.0.1|jom/find_similar|marianmarian|none|Query successful.
+11:16:23|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+11:17:05|127.0.0.1|marian/make_reservation|marianmarian|asdfasf,2013-03-27,2013-03-28,lb,:(|Query sucessful.
+11:17:10|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+11:17:10|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+11:17:10|127.0.0.1|jom/check_for_conflict|marianmarian|none|Query successful.
+11:17:10|127.0.0.1|jom/find_similar|marianmarian|none|Query successful.
+11:17:10|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+11:17:33|127.0.0.1|karla/read_packages|admin|none|Query successful.
+11:17:33|127.0.0.1|jom/view_pending|admin|none|Query successful.
+11:17:33|127.0.0.1|jom/check_for_conflict|admin|none|Query successful.
+11:17:33|127.0.0.1|jom/find_similar|admin|none|Query successful.
+11:17:33|127.0.0.1|jom/view_pending|admin|none|Query successful.
+11:20:51|127.0.0.1|jom/approve_reservation|admin|6|Reservation APPROVED!
+11:20:55|127.0.0.1|karla/read_packages|admin|none|Query successful.
+11:20:55|127.0.0.1|jom/view_pending|admin|none|Query successful.
+11:20:55|127.0.0.1|jom/check_for_conflict|admin|none|Query successful.
+11:20:55|127.0.0.1|jom/find_similar|admin|none|Query successful.
+11:20:55|127.0.0.1|jom/view_pending|admin|none|Query successful.
+11:22:34|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+11:22:34|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+11:22:34|127.0.0.1|jom/check_for_conflict|marianmarian|none|Query successful.
+11:22:34|127.0.0.1|jom/find_similar|marianmarian|none|Query successful.
+11:22:34|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+11:23:19|127.0.0.1|marian/cancel_reservation|marianmarian|2|Reservation CANCELLED!
+11:23:49|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+11:23:49|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+11:23:49|127.0.0.1|jom/check_for_conflict|marianmarian|none|No conflicts.
+11:23:49|127.0.0.1|jom/find_similar|marianmarian|none|Query successful.
+11:23:49|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+11:24:02|127.0.0.1|marian/cancel_reservation|marianmarian|4|Reservation CANCELLED!
+11:24:07|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+11:24:07|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+11:24:07|127.0.0.1|jom/check_for_conflict|marianmarian|none|No conflicts.
+11:24:07|127.0.0.1|jom/find_similar|marianmarian|none| 
+11:24:07|127.0.0.1|jom/view_pending|marianmarian|none|Query successful.
+11:24:09|127.0.0.1|marian/cancel_reservation|marianmarian|5|Reservation CANCELLED!
+11:24:11|127.0.0.1|karla/read_packages|marianmarian|none|Query successful.
+11:24:11|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+11:24:11|127.0.0.1|jom/check_for_conflict|marianmarian|none|No conflicts.
+11:24:11|127.0.0.1|jom/find_similar|marianmarian|none| 
+11:24:11|127.0.0.1|jom/view_pending|marianmarian|none|Query sucessful.
+11:24:24|127.0.0.1|karla/read_packages|admin|none|Query successful.
+11:24:24|127.0.0.1|jom/view_pending|admin|none|Query sucessful.
+11:24:24|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+11:24:24|127.0.0.1|jom/find_similar|admin|none| 
+11:24:24|127.0.0.1|jom/view_pending|admin|none|Query sucessful.
+11:25:45|127.0.0.1|karla/delete_package|admin|9|Package successfully deleted.
+11:25:50|127.0.0.1|karla/read_packages|admin|none|Query successful.
+11:25:50|127.0.0.1|jom/view_pending|admin|none|Query sucessful.
+11:25:50|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+11:25:50|127.0.0.1|jom/find_similar|admin|none| 
+11:25:50|127.0.0.1|jom/view_pending|admin|none|Query sucessful.
