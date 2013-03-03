@@ -4,7 +4,7 @@
 	$similar = API::execute('jom/find_similar', array());  
 ?>
 
-<div id="check_for_conflict_div" class="mod admin_module">
+<div id="check_for_conflict_div" class="module">
 <h3>Check for Conflict</h3>
  <br />
  <form method="POST" class="form ">
