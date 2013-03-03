@@ -1,4 +1,4 @@
-<div id="sign_in_up_div" class="mod logout_module">
+<div id="sign_in_up_div" class="mod module">
 	<div class="span3 gradient">
 		<div class="accordion" id="accordion2">
 			

@@ -24,20 +24,11 @@
 				foreach(glob("modules/*") as $file)
 					if(file_exists($file."/js/default.js"))
 						$js.=file_get_contents($file."/js/default.js");
-				$mode = "logout_module";
-				if(isset($_SESSION['role'])){
-					if($_SESSION['role'] == "admin")
-						$mode = "admin_module";
-					else if($_SESSION['role'] == "user")
-						$mode = "user_module";
-				}
-				$js.="fadeInMods($('.module, .".$mode."'),0);";
 				if(RConfig::minifyJS) $js = RModuleMgr::minifyJS($js);
 				$f = fopen("_auto/auto.min.js",'w');
 				fwrite($f,$js);
 				fclose($f);
-			}?><script src="_auto/auto.min.js" type="text/javascript"></script>
-<?php }
+			}?><script src="_auto/auto.min.js" type="text/javascript"></script><?php }
 		
 		
 		public static function renderStyles(){
@@ -53,8 +44,28 @@
 				$f = fopen("_auto/auto.min.css",'w');
 				fwrite($f, $css);
 				fclose($f);
-			}?><link rel="stylesheet" href="_auto/auto.min.css" type="text/css"/>
-<?php }
+			}?><link rel="stylesheet" href="_auto/auto.min.css" type="text/css"/><?php }
+		
+		public static function minifyHTML($html){
+			if(RConfig::minifyHTML){
+				$html = str_replace(array("\t")," ",$html);
+				$html = str_replace(array("\n","\r")," ",$html);
+				$html = preg_replace("/\s+/"," ",$html);
+				$html = str_replace(array("> <"),"><",$html);
+				if(RConfig::encryptHTML){
+					?><script>document.write(unescape('<?php echo trim(RModuleMgr::strToHex($html)); ?>'))</script><?php
+				}else{
+					echo trim($html);
+				}
+			}
+		}
+		
+		private static function strToHex($string){
+			$hex='';
+			for ($i=0; $i < strlen($string); $i++)
+				$hex .= '%'.dechex(ord($string[$i]));
+			return $hex;
+		}
 		
 		private static function minifyJS($js){
 			$js = str_replace(array("\t")," ",$js);

@@ -14,7 +14,7 @@ function validateLogin(f){
 				if(data=="0")
 					alert("Incorrect username or password");
 				else
-					fadeMods($('.logout_module'),0,$('.user_module'));
+					loadModules();
 			}
 			else
 				alert("Something went wrong :(");
@@ -27,7 +27,7 @@ function sign_up(f){
 		function(data, textStatus, jqXHR) {
 			if(jqXHR.status==200){
 				console.log(data);
-				console.log("successfully signed up!");
+				alert("Successfully signed up!");
 			}else{
 				alert("Something went wrong :(");
 			}
