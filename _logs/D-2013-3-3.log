@@ -49,3 +49,75 @@
 14:19:35|::1|jom/view_pending|adminadmin|none|Query successful.
 14:19:35|::1|jom/view_pending|adminadmin|none|Query successful.
 14:21:52|::1|karla/read_packages|anon|none|Query successful.
+15:52:21|127.0.0.1|karla/read_packages|admin|none|Query successful.
+15:52:21|127.0.0.1|jom/view_pending|admin|none|Query sucessful.
+15:52:21|127.0.0.1|jom/view_pending|admin|none|Query sucessful.
+15:52:21|127.0.0.1|jom/view_pending|admin|none|Query sucessful.
+16:00:58|127.0.0.1|jom/view_pending|karlapalevino|none|Query sucessful.
+16:00:58|127.0.0.1|jom/check_for_conflict|karlapalevino|none|No conflicts.
+16:00:58|127.0.0.1|jom/find_similar|karlapalevino|none| 
+16:00:58|127.0.0.1|jom/view_pending|karlapalevino|none|Query sucessful.
+16:01:05|127.0.0.1|karla/read_packages|karlapalevino|none|Query successful.
+16:01:05|127.0.0.1|jom/view_pending|karlapalevino|none|Query sucessful.
+16:01:05|127.0.0.1|jom/check_for_conflict|karlapalevino|none|No conflicts.
+16:01:05|127.0.0.1|jom/find_similar|karlapalevino|none| 
+16:01:05|127.0.0.1|jom/view_pending|karlapalevino|none|Query sucessful.
+16:01:38|127.0.0.1|marian/make_reservation|karlapalevino|First Hour,2013-04-04,2013-04-04,lb,:)|Query sucessful.
+16:01:43|127.0.0.1|karla/read_packages|karlapalevino|none|Query successful.
+16:01:43|127.0.0.1|jom/view_pending|karlapalevino|none|Query successful.
+16:01:43|127.0.0.1|jom/check_for_conflict|karlapalevino|none|No conflicts.
+16:01:43|127.0.0.1|jom/find_similar|karlapalevino|none| 
+16:01:43|127.0.0.1|jom/view_pending|karlapalevino|none|Query successful.
+16:09:07|127.0.0.1|jom/view_pending|karlapalevino|none|Query successful.
+16:09:07|127.0.0.1|jom/check_for_conflict|karlapalevino|none|No conflicts.
+16:09:07|127.0.0.1|jom/find_similar|karlapalevino|none| 
+16:09:07|127.0.0.1|jom/view_pending|karlapalevino|none|Query successful.
+16:09:07|127.0.0.1|karla/view_summary|karlapalevino|none|Query sucessful.
+16:09:32|127.0.0.1|karla/read_packages|admin|none|Query successful.
+16:09:32|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:09:32|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+16:09:32|127.0.0.1|jom/find_similar|admin|none| 
+16:09:32|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:09:32|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+16:09:32|127.0.0.1|jom/find_similar|admin|none| 
+16:09:32|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:09:32|127.0.0.1|karla/view_summary|admin|none|Query sucessful.
+16:10:01|127.0.0.1|karla/read_packages|admin|none|Query successful.
+16:10:01|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:10:01|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+16:10:01|127.0.0.1|jom/find_similar|admin|none| 
+16:10:02|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:10:02|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+16:10:02|127.0.0.1|jom/find_similar|admin|none| 
+16:10:02|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:10:02|127.0.0.1|karla/view_summary|admin|none|Query sucessful.
+16:12:30|127.0.0.1|karla/read_packages|admin|none|Query successful.
+16:12:30|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:12:30|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+16:12:30|127.0.0.1|jom/find_similar|admin|none| 
+16:12:30|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:12:30|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+16:12:30|127.0.0.1|jom/find_similar|admin|none| 
+16:12:30|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:12:30|127.0.0.1|karla/view_summary|admin|none|Query sucessful.
+16:15:57|127.0.0.1|karla/read_packages|admin|none|Query successful.
+16:15:57|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:15:57|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+16:15:57|127.0.0.1|jom/find_similar|admin|none| 
+16:15:57|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:15:57|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+16:15:57|127.0.0.1|jom/find_similar|admin|none| 
+16:15:57|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:15:57|127.0.0.1|karla/view_summary|admin|none|Query sucessful.
+16:18:32|127.0.0.1|karla/read_packages|admin|none|Query successful.
+16:18:32|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:18:32|127.0.0.1|jom/check_for_conflict|admin|none|No conflicts.
+16:18:32|127.0.0.1|jom/find_similar|admin|none| 
+16:18:32|127.0.0.1|jom/view_pending|admin|none|Query successful.
+16:18:32|127.0.0.1|karla/view_summary|admin|none|Query sucessful.
+16:18:53|127.0.0.1|karla/read_packages|admin|none|Query successful.
+16:18:53|127.0.0.1|karla/view_summary|admin|none|Query sucessful.
+16:22:31|127.0.0.1|karla/read_packages|admin|none|Query successful.
+16:22:31|127.0.0.1|karla/view_summary|admin|none|Query successful.
+16:32:33|127.0.0.1|karla/read_packages|admin|none|Query successful.
+16:32:33|127.0.0.1|karla/view_summary|admin|none|Query successful.

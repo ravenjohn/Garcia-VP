@@ -46,5 +46,8 @@
 	else if(isset($_GET['reservation_cancel'])){
 		print_r(json_encode(API::execute("marian/cancel_reservation",$_POST)));
 	}
+	else if(isset($_GET['view_summary'])){
+		print_r(json_encode(API::execute("karla/view_summary",$_POST)));
+	}
 	else{?><h1>You are not allowed to use this API.</h1><?php }
 ?>
