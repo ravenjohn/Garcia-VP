@@ -1,5 +1,5 @@
 <?php $packages = API::execute("karla/read_packages",array());?>
-<div id="manage_package_div" class="mod admin_module">
+<div id="manage_package_div" class="mod module">
 	<div class="span3 gradient">
 		<h3>Create Package</h3>
 		<form method="POST" action="<?php echo RConfig::ajax_url?>create_package" onsubmit="return create_package(this);" class="form">

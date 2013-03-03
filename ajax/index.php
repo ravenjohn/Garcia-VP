@@ -29,6 +29,7 @@
 	}
 	else if(isset($_GET['logout'])){
 		session_destroy();
+		echo "Successfully logged out";
 	}
 	else if(isset($_GET['create_package'])){
 		print_r(json_encode(API::execute("karla/create_package",$_POST)));

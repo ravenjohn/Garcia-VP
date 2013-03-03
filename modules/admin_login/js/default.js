@@ -5,7 +5,7 @@ function adminValidateLogin(f){
 				if(data=="0")
 					alert("Incorrect username or password");
 				else
-					fadeMods($('.logout_module'),0,$('.admin_module'));
+					loadModules();
 			}
 			else
 				alert("Something went wrong :(");

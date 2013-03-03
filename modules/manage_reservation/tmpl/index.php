@@ -3,8 +3,8 @@ $result = API::execute('jom/view_pending',array());
 $conflict = API::execute('jom/check_for_conflict',array()); 
 $similar = API::execute('jom/find_similar', array());  
 $reservations = API::execute("jom/view_pending",array());?>
-<div id="manage_reservation_div" class="mod admin_module user_module">
-	<div class="span9 offset3 gradient">
+<div id="manage_reservation_div" class="mod module">
+	<div class="span12 gradient">
 		<form action="<?php echo RConfig::ajax_url?>reservation_" class="form" name="manage_reservation_form" method="POST">
 			<table class="table table-bordered" class="view_reservations_table">
 				<tr>

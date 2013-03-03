@@ -16,11 +16,15 @@
 		const logs_path = "C://xampp/htdocs/VERSION_AB5L_GROUP1/_logs/";
 
 		const log = true;
+		
 		const replaceCSS = true;
 		const replaceJS = true;
 
 		const minifyCSS = true;
-		const minifyJS = false;
+		const minifyJS = true;
+		const minifyHTML = true;
+		
+		const encryptHTML = false;
 		
 		const DB_HOST = "localhost";
 		const DB_NAME = "garciadb";

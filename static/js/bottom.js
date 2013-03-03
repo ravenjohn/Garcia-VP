@@ -1,72 +1,33 @@
+function fadeOutMods(mods, i, a){
+	if(i == mods.length){
+		$.post("?get="+a,{},
+			function (data){
+				$('#app_div').append(data);
+				fadeInMods($(".mod"),0);
+			}
+		);
+		return;
+	}
+	$(mods[i]).fadeOut("fast", function(){
+		$(mods[i]).remove();
+		fadeOutMods(mods, i+1, a);
+	});
+}
 function fadeInMods(mods, i){
 	if(i == mods.length) return;
 	$(mods[i]).fadeIn("fast", function(){
 		fadeInMods(mods, i+1);
 	});
 }
-function fadeMods(mods, i, mods2){
-	if(i == mods.length){
-		fadeInMods(mods2, 0);
-		return;
-	}
-	$(mods[i]).fadeOut("fast", function(){
-		fadeMods(mods, i+1, mods2);
-	});
+function loadModules(a){
+	b = window.location.hash;
+	if(a==undefined)
+		a = b.substr(1,b.length);
+	else
+		window.location.hash = a;
+	fadeOutMods($('.module'),0,a);
 }
-
-$(function() {
-	$('#sdt_menu > li').bind('mouseenter',function(){
-		var $elem = $(this);
-		$elem.find('img')
-			 .stop(true)
-			 .animate({
-				'width':'170px',
-				'height':'170px',
-				'left':'0px'
-			 },400,'easeOutBack')
-			 .andSelf()
-			 .find('.sdt_wrap')
-			 .stop(true)
-			 .animate({'top':'140px'},500,'easeOutBack')
-			 .andSelf()
-			 .find('.sdt_active')
-			 .stop(true)
-			 .animate({'height':'170px'},300,function(){
-			var $sub_menu = $elem.find('.sdt_box');
-			if($sub_menu.length){
-				var left = '170px';
-				if($elem.parent().children().length == $elem.index()+1)
-					left = '-170px';
-				$sub_menu.show().animate({'left':left},200);
-			}	
-		});
-	}).bind('mouseleave',function(){
-		var $elem = $(this);
-		var $sub_menu = $elem.find('.sdt_box');
-		if($sub_menu.length)
-			$sub_menu.hide().css('left','0px');
-		
-		$elem.find('.sdt_active')
-			 .stop(true)
-			 .animate({'height':'0px'},300)
-			 .andSelf().find('img')
-			 .stop(true)
-			 .animate({
-				'width':'0px',
-				'height':'0px',
-				'left':'85px'},400)
-			 .andSelf()
-			 .find('.sdt_wrap')
-			 .stop(true)
-			 .animate({'top':'25px'},500);
-	});
-$('#relatedPosts').toggle(
-		function(){
-			$('#rp_list').animate({'bottom':'10px'},500);
-		},
-		function(){
-			$('#rp_list').animate({'bottom':'-50px'},500);
-		}
-	);
-	$('#rp_list a').tipsy({gravity: 's'});
-});
+if(window.location.hash==""){
+	window.location.hash = 'home';
+}
+loadModules();

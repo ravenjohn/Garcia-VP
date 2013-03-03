@@ -1,7 +1,7 @@
 <?php if(!isset($packages)) $packages = API::execute("karla/read_packages",array());?>
 <div id="view_packages_div" class="mod module span9">
 	<div class="gradient">
-		<table class="table table-bordered" class="view_packages_table">
+		<table class="table" class="view_packages_table">
 			<tr>
 				<th>Category</th>
 				<th>Name</th>
