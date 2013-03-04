@@ -40,3 +40,11 @@
 14:19:35|::1|jom/find_similar|adminadmin|none|PROCEDURE garciadb.FIND_SIMILAR does not exist
 14:19:35|::1|jom/check_for_conflict|adminadmin|none|PROCEDURE garciadb.CHECK_FOR_CONFLICTS does not exist
 14:19:35|::1|jom/find_similar|adminadmin|none|PROCEDURE garciadb.FIND_SIMILAR does not exist
+15:52:21|127.0.0.1|jom/check_for_conflict|admin|none|PROCEDURE garciadb.CHECK_FOR_CONFLICTS does not exist
+15:52:21|127.0.0.1|jom/find_similar|admin|none|PROCEDURE garciadb.FIND_SIMILAR does not exist
+15:52:21|127.0.0.1|jom/check_for_conflict|admin|none|PROCEDURE garciadb.CHECK_FOR_CONFLICTS does not exist
+15:52:21|127.0.0.1|jom/find_similar|admin|none|PROCEDURE garciadb.FIND_SIMILAR does not exist
+15:58:18|127.0.0.1|conrad/sign_up|anon|karlapalevino,Karlapalevino18,Karlapalevino18,kp_0111@yahoo.com,palevino,karla,1234565678,asdfghj,2003-12-31|PROCEDURE garciadb.SIGN_UP does not exist
+15:58:18|127.0.0.1|conrad/sign_up|anon|karlapalevino,Karlapalevino18,Karlapalevino18,kp_0111@yahoo.com,palevino,karla,1234565678,asdfghj,2003-12-31|PROCEDURE garciadb.SIGN_UP does not exist
+15:59:20|127.0.0.1|conrad/sign_up|anon|karlapalevino,Karlapalevino18,Karlapalevino18,kp_0111@yahoo.com,palevino,karla,1234565678,asdfghj,2003-12-31|PROCEDURE garciadb.SIGN_UP does not exist
+16:00:22|127.0.0.1|conrad/sign_up|anon|karlapalevino,Karlapalevino18,Karlapalevino18,kp_0111@yahoo.com,palevino,karla,1234565678,asdfghj,2003-12-31|PROCEDURE garciadb.SIGN_UP does not exist
