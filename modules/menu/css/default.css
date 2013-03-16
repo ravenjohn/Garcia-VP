@@ -1,8 +1,7 @@
 #menu_div{
-	margin-top: 200px;
-	z-index: 100;
 	text-align: right;
 	height: 300px;
+	z-index: 300;
 }
 #header h1{
 	color: #000;
@@ -12,7 +11,6 @@
 #menu_div ul{
 	background-image: url(../static/img/window-bg.png);
 	background-attachment: absolute;
-	width: inherit;
 }
 #menu_div ul li{
 	display: list-item;

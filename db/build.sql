@@ -10,8 +10,7 @@ create table __users(
 	firstName VARCHAR(40) NOT NULL,
 	lastName VARCHAR(30) NOT NULL,
 	address VARCHAR(100) NOT NULL,
-	contact VARCHAR(30) NOT NULL,
-	birthday DATE NOT NULL
+	contact VARCHAR(30) NOT NULL
 );
 
 drop table if exists __admin;
@@ -31,8 +30,21 @@ create table __packages(
 drop table if exists __reservations;
 create table __reservations(
 	id INT(11) auto_increment primary key,
+	title VARCHAR(255) NOT NULL,
 	username VARCHAR(16) NOT NULL,
-	packageName VARCHAR(64) NOT NULL,
+	packageId INT(11) NOT NULL,
+	startDate DATETIME NOT NULL,
+	endDate DATETIME NOT NULL,
+	location VARCHAR(100) NOT NULL,
+	additionalRequest VARCHAR(1500),
+	status VARCHAR(64)
+);
+
+drop table if exists __feedbacks;
+create table __feedbacks(
+	id INT(11) auto_increment primary key,
+	username VARCHAR(16) NOT NULL,
+	packageId INT(11) NOT NULL,
 	startDate DATETIME NOT NULL,
 	endDate DATETIME NOT NULL,
 	location VARCHAR(100) NOT NULL,
@@ -46,4 +58,4 @@ INSERT INTO __packages VALUES("","Photo Booth Packages","First Hour","3500 (Ever
 INSERT INTO __packages VALUES("","Photo Booth Packages","Photo Service and Booth Package","7000");
 INSERT INTO __packages VALUES("","Photo and Video","Photo Service","2500");
 
-INSERT INTO __admins VALUES('admin','admin');
+INSERT INTO __admins VALUES('admin',SHA1(md5('admin')));
