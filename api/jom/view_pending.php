@@ -1,3 +1,3 @@
 <?php
 	defined('AUTH') or die;
-	$query = "SELECT * FROM __reservations WHERE status LIKE '%pending%';";
+	$query = "SELECT a.*, b.name as packageName FROM __reservations a, __packages b WHERE a.status LIKE '%pending%' and b.id=a.packageId;";

@@ -6,8 +6,6 @@ function adminValidateLogin(f){
 					alert("Incorrect username or password");
 				else{
 					loadModules();
-					$('#main_menu').append('<li><a href="#logout" class="main_menu_link" id="logoutButton">LOGOUT</a></li>');
-					rebindLogout();
 				}
 			}
 			else
