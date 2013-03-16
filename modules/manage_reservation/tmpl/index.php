@@ -1,9 +1,14 @@
 <?php
-$result = API::execute('jom/view_pending',array());
-$conflict = API::execute('jom/check_for_conflict',array()); 
-$similar = API::execute('jom/find_similar', array());  
-$reservations = API::execute("jom/view_pending",array());?>
+	$result = API::execute('jom/view_pending',array());
+	$conflict = API::execute('jom/check_for_conflict',array()); 
+	$similar = API::execute('jom/find_similar', array());  
+	$reservations = API::execute("jom/view_pending",array());
+?>
 <div id="manage_reservation_div" class="module span9">
+	<h3>Reservations</h3>
+	<?php if(empty($reservations['items'])){ ?>
+		You have no reservations . . .  :(
+	<?php }else{ ?>
 	<form action="<?php echo RConfig::ajax_url?>reservation_" class="form" name="manage_reservation_form" method="POST">
 		<table class="table table-bordered" class="view_reservations_table">
 			<tr>
@@ -16,11 +21,6 @@ $reservations = API::execute("jom/view_pending",array());?>
 				<th>Action</th>
 				<th></th>
 			</tr>
-			<?php if(empty($reservations['items'])){ ?>
-			<tr class="remove">
-				<th colspan="3">No reservations to display . . .  :( </th>
-			</tr>
-			<?php }else{?>
 				<input type="hidden" name="id"/>
 				<?php foreach($reservations['data'] as $p){
 					if($_SESSION['role']=='user' && $p['username']!=$_SESSION['username']) continue;

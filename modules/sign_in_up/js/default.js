@@ -40,4 +40,7 @@ $('.text-tooltip').tooltip();
 $('.text-tooltip').focus(function(){
 	$(this).tooltip('show');
 });
+$('.text-tooltip').focusout(function(){
+	$(this).tooltip('hide');
+});
 $('#menu_div').removeClass('window');

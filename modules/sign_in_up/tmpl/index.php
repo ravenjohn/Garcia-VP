@@ -1,3 +1,4 @@
+<?php defined('AUTH') or die;?>
 <div id="sign_in_up_div" class="module span9">
 	<div class="span5" id="introDiv">
 		<h1>Let us capture the best parts of your life!</h1>
@@ -20,11 +21,11 @@
 							</div>
 							<div class="input-prepend">
 								<span class="add-on"><i class="icon-lock"></i></span>
-								<input type="password" name="password" max="16" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" placeholder="Password" class="text-tooltip" data-toggle="tooltip" title="Must have atleast 1 small letter,<br />1 capital letter and 1 number." data-html="true"/>
+								<input type="password" name="password" max="16" pattern=".{8,16}" required="required" placeholder="Password" class="text-tooltip" data-toggle="tooltip" title="8-16 characters only." data-html="true"/>
 							</div>
 							<div class="input-prepend">
 								<span class="add-on"></span>
-								<input type="password" name="cpassword" max="16" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" placeholder="Confirm Password" class="text-tooltip" data-toggle="tooltip" title="Just retype your password." data-html="true"/>
+								<input type="password" name="cpassword" max="16" pattern=".{8,16}" required="required" placeholder="Confirm Password" class="text-tooltip" data-toggle="tooltip" title="Just retype your password." data-html="true"/>
 							</div>
 							<div class="input-prepend">
 								<span class="add-on"><i class="icon-envelope"></i></span>

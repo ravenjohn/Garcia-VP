@@ -31,8 +31,9 @@ create table __packages(
 drop table if exists __reservations;
 create table __reservations(
 	id INT(11) auto_increment primary key,
+	title VARCHAR(255) NOT NULL,
 	username VARCHAR(16) NOT NULL,
-	packageName VARCHAR(64) NOT NULL,
+	packageId INT(11) NOT NULL,
 	startDate DATETIME NOT NULL,
 	endDate DATETIME NOT NULL,
 	location VARCHAR(100) NOT NULL,
