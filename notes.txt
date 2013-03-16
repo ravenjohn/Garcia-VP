@@ -10,6 +10,7 @@ registered user can:
 login - done
 logout - done
 create reservation - done
+cancel reservation
 add feedback
 view reservations - done
 view quotation

@@ -19,7 +19,7 @@
 				<td><?php echo $p['name']; ?></td>
 				<td><?php echo $p['cost']; ?></td>
 				<td>
-					<button title="Select" type="button" class="btn btn-success" onclick="$('#packageName_temp').val('<?php echo $p['name']?>');$('#packageName_temp2').val('<?php echo $p['name']?>');"><i class="icon-reply"></i> SELECT</button>
+					<button title="Select" type="button" class="btn btn-success" onclick="$('#packageName_temp').val('<?php echo $p['name']?>');$('#packageName_temp2').val('<?php echo $p['id']?>');"><i class="icon-reply"></i> SELECT</button>
 				</td>
 			</tr>
 			<?php }?>

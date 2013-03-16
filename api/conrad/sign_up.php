@@ -7,7 +7,6 @@
 	$input[] = $_POST['lastName'];
 	$input[] = $_POST['address'];
 	$input[] = $_POST['contact'];
-	$input[] = $_POST['birthday'];
 	$check = false;
 
 	if(API::checkEmpty($input)){
@@ -15,4 +14,4 @@
 		$error_message = "Request is missing required parameter(s)";
 	}else $input = API::sanitize($link,$input);
 
-	$query = "CALL SIGN_UP('$input[0]', '$input[1]', '$input[2]', '$input[3]', '$input[4]' ,'$input[5]' , '$input[6]', '$input[7]');";
+	$query = "CALL SIGN_UP('$input[0]', '$input[1]', '$input[2]', '$input[3]', '$input[4]' ,'$input[5]' , '$input[6]');";

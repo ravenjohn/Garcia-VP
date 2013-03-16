@@ -2,7 +2,7 @@
 <div id="make_reservation_div" class="span9 module">
 	<h3>Make Reservation</h3>
 	<form method="POST" action="<?php echo RConfig::ajax_url?>make_reservation" onsubmit="return make_reservation(this);" class="form">
-		<input type="hidden" id="packageName_temp2" name="packageName"/>
+		<input type="hidden" id="packageName_temp2" name="packageId"/>
 		<div class="input-prepend">
 			<span class="add-on">Title</span>
 			<input type="text" name="title" required="required" class="span8" placeholder="e.g. Heaven's 7th Birthday!"/>

@@ -3,13 +3,13 @@ srs
 user story
 
 modules
-	-  add/delete/view feedback
-	-  view user quotation
-	-  create/edit user quotation
-	-  view summary of sales
-	-  send email for confirmation, password forgotten
+	-R  add/delete/view feedback
+	-R  view user quotation
+	-R  create/edit user quotation
+	-R  view summary of sales
+	-R  send email for confirmation, password forgotten
 	-R add/delete pictures in gallery
 	-R add/delete gallery
 	-C reservations calendar
-	-  lots of frontend input validations
+	-R  lots of frontend input validations
 video

@@ -1,5 +1,5 @@
 function make_reservation(f){
-	if(f.packageName.value=='' || f.packageName.value==null) {
+	if(f.packageId.value=='' || f.packageId.value==null) {
 		alert("Please select a package first");
 		return false;
 	}

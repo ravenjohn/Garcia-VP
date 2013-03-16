@@ -2,14 +2,14 @@
 
 DROP PROCEDURE IF EXISTS SIGN_UP;
 DELIMITER $$
-CREATE PROCEDURE SIGN_UP(_username VARCHAR(16), _password VARCHAR(40), _email VARCHAR(32), _firstName VARCHAR(40), _lastName VARCHAR(30), _address VARCHAR(100), _contact VARCHAR(30), _birthday DATE)
+CREATE PROCEDURE SIGN_UP(_username VARCHAR(16), _password VARCHAR(40), _email VARCHAR(32), _firstName VARCHAR(40), _lastName VARCHAR(30), _address VARCHAR(100), _contact VARCHAR(30))
 BEGIN
 	DECLARE _exists BOOLEAN DEFAULT FALSE;
 	SELECT COUNT(*) > 0 INTO _exists FROM __users WHERE username = _username;
 	IF _exists THEN
 		SELECT "Username already taken" as message, "0" as status;
 	ELSE
-		INSERT into __users values(_username, sha1(md5(_password)), _email, _firstName, _lastName, _address, _contact, _birthday);
+		INSERT into __users values(_username, sha1(md5(_password)), _email, _firstName, _lastName, _address, _contact);
 		SELECT "Account successfully created" as message, "1" as status;
 	END IF;
 END $$

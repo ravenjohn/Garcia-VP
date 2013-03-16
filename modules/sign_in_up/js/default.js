@@ -10,7 +10,6 @@ function validateLogin(f){
 	$.post( $(f).attr('action'), $(f).serialize(),
 		function(data, textStatus, jqXHR) {
 			if(jqXHR.status==200){
-				console.log(data);
 				if(data=="0")
 					alert("Incorrect username or password");
 				else
@@ -26,8 +25,10 @@ function sign_up(f){
 	$.post( $(f).attr('action'), $(f).serialize(),
 		function(data, textStatus, jqXHR) {
 			if(jqXHR.status==200){
-				console.log(data);
 				alert("Successfully signed up!");
+				$('#collapseTwo').collapse('toggle');
+				$('#collapseOne').collapse('toggle');
+				$('#loginUsername').focus();
 			}else{
 				alert("Something went wrong :(");
 			}

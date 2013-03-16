@@ -21,7 +21,7 @@
 				$modules[] = "profile_nav";
 				if($_SESSION['role']=='admin'){
 					$modules[] = "manage_package";
-					$modules[] = "check_for_conflict";
+					// $modules[] = "check_for_conflict";
 				}
 				$modules[] = "manage_reservation";
 			}

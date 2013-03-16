@@ -2,7 +2,7 @@
 	$res = API::execute("raven/count_reservations",array());
 	$res = $res['data'][0]['reservationCount'];
 ?>
-<div id="profile_nav_div" class="module span9">
+<div id="profile_nav_div" class="module">
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container">
@@ -15,15 +15,16 @@
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li>
-							<a>
-								Reservations <span class="badge badge-important"><?php echo $res; ?></span>
-							</a>
+							<a>My Reservations <span class="badge badge-important"><?php echo $res; ?></span></a>
+						</li>
+						<li>
+							<a onclick="$('#packages_menu').click(); return false" href="#">Make Reservation</a>
 						</li>
 					</ul>
 					<ul class="nav pull-right">
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								<i class="icon-cog"></i>
+								Account <i class="icon-cog"></i>
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="#">Edit Profile</a></li>

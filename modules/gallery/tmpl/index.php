@@ -1,4 +1,7 @@
 <section id="gallery_div" class="span9 module">
+	<?php if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin'){?>
+		<button class="btn"><i class="icon-plus"></i> Create Gallery</button>
+	<?php }?>
 	<ul id='gallery_menu'>
 		<?php foreach(glob("static/img/gallery/*") as $file){
 			$a = explode("/",$file);

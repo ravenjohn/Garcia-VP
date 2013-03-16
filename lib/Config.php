@@ -23,7 +23,7 @@
 		const replaceJS 		= true;
 
 		const minifyCSS 		= true;
-		const minifyJS 			= false;
+		const minifyJS 			= true;
 		const minifyHTML 		= true;
 		
 		const encryptHTML 		= false;

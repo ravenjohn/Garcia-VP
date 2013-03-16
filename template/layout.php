@@ -12,7 +12,7 @@
 		<title><?php echo RConfig::app_name; ?></title>
 		<link rel="author" href="humans.txt">
 		<?php RModuleMgr::renderStyles(); ?>
-		<!--link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine"-->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 		<link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" href="static/img/apple-touch-icon.png">
 		<link rel="apple-touch-icon-precomposed" href="static/img/apple-touch-icon-precomposed.png">
@@ -36,11 +36,8 @@
 				<div id="app_div" class="span9"></div>
 			</div>
 		</section>
-		<!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRcpm6XbNvVll0lJTUHmXsgBa_7wP8HP0&sensor=false"> </script-->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRcpm6XbNvVll0lJTUHmXsgBa_7wP8HP0&sensor=false"> </script>
 		<?php RModuleMgr::renderScripts(); ?>
-		<script type="text/javascript">
-			loadMenu();
-			loadModules();
-		</script>
+		<script type="text/javascript">loadMenu();loadModules();</script>
 	</body>
 </html>
