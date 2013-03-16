@@ -1,37 +1,23 @@
 #menu_div{
-	margin-top: 30px;
+	margin-top: 200px;
+	z-index: 100;
+	text-align: right;
+	height: 300px;
 }
-#menu_ul{
-	float: none;
-	margin: auto;
-	position: inherit;
+#header h1{
+	color: #000;
+	font-size: 50px;
+	font-family: 'Tangerine';
 }
-#menu_div .menu_link{
-	background:rgba(209,236,169,0.2) url(../static/img/overlay.png);
- 	-moz-box-shadow:0px 0px 2px #FFF inset;
-	-webkit-box-shadow:0px 0px 2px #FFF inset;
-	box-shadow:0px 0px 2px #FFF inset;
+#menu_div ul{
+	background-image: url(../static/img/window-bg.png);
+	background-attachment: absolute;
+	width: inherit;
 }
-.menu_head, .menu_desc{
-	text-shadow:1px 1px 1px #000;
+#menu_div ul li{
+	display: list-item;
+	margin-right: 5px;
 }
-.menu_head{
-	color:#334b10;
-	font-size:24px;
-}
-.menu_desc{
-	color:#F6F6F6;
-	font-size:10px;
-	letter-spacing:1px;
-}
-#menu_div .navbar-inner{
-	box-shadow: none;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	border: 0;
-	background: 0;
-	padding: 0;
-}
-.navbar-inner{
-	margin: 0 220px;
+#menu_div ul li a{
+	
 }

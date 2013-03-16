@@ -1,6 +1,6 @@
 <?php $packages = API::execute("karla/read_packages",array());?>
-<div id="manage_package_div" class="mod module">
-	<div class="span3 gradient">
+<div id="manage_package_div" class="span9 module">
+	<div class="span3">
 		<h3>Create Package</h3>
 		<form method="POST" action="<?php echo RConfig::ajax_url?>create_package" onsubmit="return create_package(this);" class="form">
 			<div class="input-prepend">
@@ -21,7 +21,7 @@
 			<input type="submit" value="Create Package" class="btn btn-primary btn-large"/>
 		</form>
 	</div>
-	<div class="span9 gradient">
+	<div class="span5">
 		<form action="<?php echo RConfig::ajax_url?>delete_package" class="form" name="delete_package_form" method="POST">
 			<table class="table table-bordered" class="view_packages_table" id="view_packages_table">
 				<tr>

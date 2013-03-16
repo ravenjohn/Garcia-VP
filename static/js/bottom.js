@@ -1,23 +1,10 @@
-function fadeOutMods(mods, i, a){
-	if(i == mods.length){
-		$.post("?get="+a,{},
-			function (data){
-				$('#app_div').append(data);
-				fadeInMods($(".mod"),0);
-			}
-		);
-		return;
-	}
-	$(mods[i]).fadeOut("fast", function(){
-		$(mods[i]).remove();
-		fadeOutMods(mods, i+1, a);
-	});
-}
-function fadeInMods(mods, i){
-	if(i == mods.length) return;
-	$(mods[i]).fadeIn("fast", function(){
-		fadeInMods(mods, i+1);
-	});
+function fadeOutMods(mods, a){
+	$.post("?get="+a,{},
+		function (data){
+			$(mods).remove();
+			$('#app_div').append(data);
+		}
+	);
 }
 function loadModules(a){
 	b = window.location.hash;
@@ -25,9 +12,23 @@ function loadModules(a){
 		a = b.substr(1,b.length);
 	else
 		window.location.hash = a;
-	fadeOutMods($('.module'),0,a);
+	$('.active_menu').removeClass('active_menu');
+	$('#'+a+'_menu').addClass('active_menu');
+	fadeOutMods($('.module'),a);
 }
-if(window.location.hash==""){
-	window.location.hash = 'home';
+if(window.location.hash=="" || !(
+	window.location.hash=="#home" ||
+	window.location.hash=="#debut" ||
+	window.location.hash=="#packages" ||
+	window.location.hash=="#feedbacks" ||
+	window.location.hash=="#contact"
+)){
+	window.location.hash = 'gallery';
 }
-loadModules();
+function loadMenu(){
+	$.post("?get=menu",{},
+		function (data){
+			$('#app_div').before(data);
+		}
+	);
+}

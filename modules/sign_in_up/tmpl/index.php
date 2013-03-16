@@ -1,7 +1,10 @@
-<div id="sign_in_up_div" class="mod module">
-	<div class="span3 gradient">
+<div id="sign_in_up_div" class="module span9">
+	<div class="span5" id="introDiv">
+		<h1>Let us capture the best parts of your life!</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero eget arcu consequat ullamcorper. Curabitur justo lectus, ullamcorper ac tristique nec, facilisis id augue. Nullam luctus eni..</p>
+	</div>
+	<div class="span3">
 		<div class="accordion" id="accordion2">
-			
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
@@ -76,11 +79,6 @@
 					</div>
 				</div>
 			</div>
-			
 		</div>
-	</div>
-	<div class="span9 gradient" id="introDiv">
-		<h1>Let us capture the best parts of your life!</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero eget arcu consequat ullamcorper. Curabitur justo lectus, ullamcorper ac tristique nec, facilisis id augue. Nullam luctus enim nec tellus aliquam ut dapibus ligula semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero eget arcu consequat ullamcorper. Curabitur justo lectus, ullamcorper ac tristique nec, facilisis id augue. Nullam luctus enim nec tellus aliquam ut dapibus ligula semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu libero eget arcu consequat ullamcorper. Curabitur justo lectus, ullamcorper ac tristique nec, facilisis id augue. Nullam luctus enim nec tellus aliquam ut dapibus ligula semper.</p>
 	</div>
 </div>
