@@ -1,0 +1,13 @@
+#contact_div{
+	position: fixed;
+	top: 250px;
+	right: 300px;
+	padding: 5px;
+	z-index: 100;
+}
+#map{
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index: 0;
+}

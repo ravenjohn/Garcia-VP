@@ -1,66 +1,15 @@
-<div id="menu_div">
-	<ul id="sdt_menu" class="sdt_menu">
+<div id="menu_div" class="span3">
+	<ul id="main_menu" class="affix-top nav nav-list">
 		<li>
-			<a href="#">
-				<img src="static/img/menu/teal.png" alt=""/>
-				<span class="sdt_active"></span>
-				<span class="sdt_wrap">
-					<span class="sdt_link">Home</span>
-					<span class="sdt_descr">Sign In | Sign Up</span>
-				</span>
-			</a>
+			<span id="header">
+				<h1>Garcia's<br />Video and Photo</h1>
+				<p>Videography, Photography,<br />and Advertising.</p>
+			</span>
 		</li>
-		<li>
-			<a href="#">
-				<img src="static/img/menu/1.jpg" alt=""/>
-				<span class="sdt_active"></span>
-				<span class="sdt_wrap">
-					<span class="sdt_link">Gallery</span>
-					<span class="sdt_descr">See how I work</span>
-				</span>
-			</a>
-			<div class="sdt_box">
-					<a href="#">Wedding</a>
-					<a href="#">Birthday</a>
-					<a href="#">Debut</a>
-					<a href="#">Photoboot</a>
-					<a href="#">Advertisements</a>
-			</div>
-		</li>
-		<li>
-			<a href="#">
-				<img src="static/img/menu/3.jpg" alt=""/>
-				<span class="sdt_active"></span>
-				<span class="sdt_wrap">
-					<span class="sdt_link">Packages</span>
-					<span class="sdt_descr">See our rates</span>
-				</span>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<img src="static/img/menu/4.jpg" alt=""/>
-				<span class="sdt_active"></span>
-				<span class="sdt_wrap">
-					<span class="sdt_link">Feedbacks</span>
-					<span class="sdt_descr">Look at their feedbacks</span>
-				</span>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<img src="static/img/menu/contact.png" alt=""/>
-				<span class="sdt_active"></span>
-				<span class="sdt_wrap">
-					<span class="sdt_link">Contact Us</span>
-					<span class="sdt_descr">Get in touch</span>
-				</span>
-			</a>
-			<div class="sdt_box">
-				<a href="#">Like us on Facebook!</a>
-				<a href="#">Follow us on Twitter!</a>
-			</div>
-		</li>
+		<li><a href="#home" class="main_menu_link" id="home_menu">HOME</a></li>
+		<li><a href="#gallery" class="main_menu_link" id="gallery_menu">GALLERY</a></li>
+		<li><a href="#packages" class="main_menu_link" id="packages_menu">PACKAGES</a></li>
+		<li><a href="#feedbacks" class="main_menu_link" id="feedbacks_menu">FEEDBACKS</a></li>
+		<li><a href="#contact" class="main_menu_link" id="contact_menu">CONTACT</a></li>
 	</ul>
 </div>
-<div class="clearfix"></div>
