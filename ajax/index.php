@@ -1,7 +1,7 @@
 <?php
 	DEFINE('AUTH',1);
 	session_start();
-	foreach(glob("../bin/*.php") as $file) include $file;
+	foreach(glob("../lib/*.php") as $file) include $file;
 	
 	if(isset($_GET['admin_login'])){
 		$result = API::execute('conrad/admin_login',$_POST);

@@ -40,3 +40,4 @@ $('.text-tooltip').tooltip();
 $('.text-tooltip').focus(function(){
 	$(this).tooltip('show');
 });
+$('#menu_div').removeClass('window');

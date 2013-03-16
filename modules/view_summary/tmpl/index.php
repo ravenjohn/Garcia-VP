@@ -1,8 +1,8 @@
 <?php
 $reservations = API::execute('karla/view_summary',array());
 ?>
-<div id="view_summary_div" class="mod admin_module user_module">
-	<div class="span9 offset3 gradient">
+<div id="view_summary_div" class="mod module">
+	<div class="span9 gradient">
 		<form action="<?php echo RConfig::ajax_url?>reservation_" class="form" name="manage_reservation_form" method="POST">
 			<table class="table table-bordered" class="view_reservations_table">
 				<tr>
