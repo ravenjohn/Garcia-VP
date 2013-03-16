@@ -1,4 +1,4 @@
-<div id="profile_nav_div" class="module">
+<div id="profile_nav_div" class="module span9">
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container">
@@ -7,7 +7,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="#">Hi <span class="bold">Raven!</span></a>
+				<a class="brand" href="#">Hi <span class="bold"><?php echo $_SESSION['username']?>!</span></a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li>
