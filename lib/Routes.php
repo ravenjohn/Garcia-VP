@@ -4,15 +4,18 @@
 	if(isset($_GET['get'])){
 		$g = $_GET['get'];
 		$modules = array();
-		if($g=='home' && !isset($_SESSION['username']))
+		if($g=='home' && !isset($_SESSION['username'])){
 			$modules[] = "sign_in_up";
-		else if($g=='gallery')
+			}
+		else if($g=='gallery'){
 			$modules[] = "gallery";
+			}
 		else if($g=='contact')
 			$modules[] = "contact";
 		else if($g=='packages'){
 			$modules[] = "view_packages";
 			$modules[] = "make_reservation";
+			$modules[] = "reserve_cal";
 		}
 		if(!isset($_SESSION['username']))
 			$modules[] = "admin_login";	
