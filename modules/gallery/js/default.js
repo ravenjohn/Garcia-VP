@@ -15,12 +15,8 @@ function slowInvi(a,i){
 function loadGallery(a){
 	a = a.split("-").pop();
 	b = '#'+a+'_gallery';
-	$('#gal_bg').fadeOut("slow", function(){
-		$('#gal_bg').css({'background-image' : 'url(static/img/gallery/'+a+'/bg.jpg)'});
-		$('#gal_bg').fadeIn("slow");
-	});
-	$('.active_gallery_menu').removeClass('active_gallery_menu');
-	$('#gallery_'+a+'_menu').addClass('active_gallery_menu');
+	$('.sub_menu_link.btn-primary').removeClass('btn-primary');
+	$('#gallery_'+a+'_menu').addClass('btn-primary');
 	$('.gallery_image').css({opacity : 0});
 	$('.active_gallery').hide();
 	$(b).addClass('active_gallery');
@@ -45,7 +41,7 @@ for(var i = 0; arguments!=undefined && i<arguments.length; i++){
 	rand = Math.floor((Math.random()*3)+1);;
 	if(b != undefined && b.indexOf('.') < 0){
 		if(arguments[i].split('/')[4] == 'bg.jpg' || arguments[i].split('/')[4] == 'bg.png') continue;	
-		a = "<div class='"+b+"_image gallery_image rotate-"+rand+"'><a class='image_link'><img src='"+arguments[i]+"' alt='gallery picture'/></a></div>";
+		a = "<div class='"+b+"_image gallery_image rotate-"+rand+"'><a class='image_link'><img src='"+arguments[i]+"' alt='gallery picture' class='img-polaroid'/></a></div>";
 		$("#"+b+"_gallery").prepend(a);
 	}else{
 		$("<img />").attr("src", arguments[i]);
@@ -58,7 +54,7 @@ loadGallery(window.location.hash);
 
 $('.image_link').click(function (){
 	$(this).css({'z-index':'0'});
-	a = "<img src='"+$(this.innerHTML)[0].src+"'/>";
+	a = "<img src='"+$(this.innerHTML)[0].src+"' class='img-polaroid'/>";
 	$('#gal_inner_overlay').html(a);
 	b = ($(window).height() - $(a)[0].naturalHeight)/2;
 	c = $(a)[0].naturalWidth;

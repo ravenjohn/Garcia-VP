@@ -1,101 +1,31 @@
---this files contains all the stored procedures needed for the app
-
-DROP PROCEDURE IF EXISTS SIGN_UP;
+DROP FUNCTION IF EXISTS SIGN_UP;
 DELIMITER $$
-CREATE PROCEDURE SIGN_UP(_username VARCHAR(16), _password VARCHAR(40), _email VARCHAR(32), _firstName VARCHAR(40), _lastName VARCHAR(30), _address VARCHAR(100), _contact VARCHAR(30))
+CREATE FUNCTION SIGN_UP(_email VARCHAR(255), _password VARCHAR(255), _fullName VARCHAR(255), _address VARCHAR(255), _contact VARCHAR(255), _confToken VARCHAR(255))
+RETURNS INT
 BEGIN
 	DECLARE _exists BOOLEAN DEFAULT FALSE;
-	SELECT COUNT(*) > 0 INTO _exists FROM __users WHERE username = _username;
+	SELECT COUNT(*) > 0 INTO _exists FROM __users WHERE email = _email;
 	IF _exists THEN
-		SELECT "Username already taken" as message, "0" as status;
+		RETURN 0;
 	ELSE
-		INSERT into __users values(_username, sha1(md5(_password)), _email, _firstName, _lastName, _address, _contact);
-		SELECT "Account successfully created" as message, "1" as status;
+		INSERT into __users values(_email, sha1(md5(_password)), _fullName, _address, _contact, FALSE, _confToken,'');
+		RETURN 1;
 	END IF;
 END $$
 DELIMITER ; 
 
+DROP FUNCTION IF EXISTS RESET_PASSWORD;
 DELIMITER $$
-DROP PROCEDURE IF EXISTS CREATE_PACKAGE;
-CREATE PROCEDURE CREATE_PACKAGE(_category VARCHAR(256), _name VARCHAR(256), _cost VARCHAR(256))
-BEGIN
-	INSERT INTO __packages VALUES('',_category,_name,_cost);
-	SELECT id FROM __packages ORDER BY id DESC LIMIT 1;
-END $$
-DELIMITER ;
-
-DROP PROCEDURE IF EXISTS DELETE_PACKAGE;
-DELIMITER $$
-CREATE PROCEDURE DELETE_PACKAGE(_id INT(11))
+CREATE FUNCTION RESET_PASSWORD(_email VARCHAR(255), _resetPasswordToken VARCHAR(255))
+RETURNS INT
 BEGIN
 	DECLARE _exists BOOLEAN DEFAULT FALSE;
-	SELECT COUNT(*) > 0 INTO _exists FROM __packages WHERE id = _id;
+	SELECT COUNT(*) > 0 INTO _exists FROM __users WHERE email = _email;
 	IF _exists THEN
-		SELECT CONCAT("Package successfully deleted.") as message, "1" as statusCode;
-		DELETE FROM __packages WHERE id = _id;
+		UPDATE __users SET resetPasswordToken = _resetPasswordToken WHERE email = _email;
+		RETURN 1;
 	ELSE
-		SELECT CONCAT("Package does not exist.") as message, "0" as statusCode;
+		RETURN 0;
 	END IF;
 END $$
-DELIMITER ;
-
-
-DROP PROCEDURE IF EXISTS CHECK_FOR_CONFLICTS;
-DELIMITER $$
-CREATE PROCEDURE CHECK_FOR_CONFLICTS()
-BEGIN
-	DECLARE _exists BOOLEAN DEFAULT FALSE;
-	SELECT COUNT(*) > 0 INTO _exists FROM __reservations r WHERE (r.startDate < (SELECT CURDATE()) OR r.endDate = (SELECT CURDATE())) AND r.status LIKE '%pending%';
-	IF _exists THEN
-		SELECT *, "1" as statusCode FROM __reservations r WHERE (r.startDate < (SELECT CURDATE()) OR r.endDate = (SELECT CURDATE())) AND r.status LIKE '%pending%';
-	ELSE
-		SELECT "No conflicts." as message, "0" as statusCode;
-	END IF;
-END $$
-DELIMITER ;
-
-DROP PROCEDURE IF EXISTS APPROVE_RESERVATION;
-DELIMITER $$
-CREATE PROCEDURE APPROVE_RESERVATION(_id INT(11))
-BEGIN
-	DECLARE _exists BOOLEAN DEFAULT FALSE;
-	SELECT COUNT(*) > 0 INTO _exists FROM __reservations r WHERE r.id = _id;
-	IF _exists THEN
-		UPDATE __reservations SET status = "APPROVED" WHERE id = _id;
-		SELECT CONCAT("Reservation APPROVED!") as message, "1" as statusCode;
-	ELSE
-		SELECT "Still PENDING." as message, "0" as statusCode;
-	END IF;
-END $$
-DELIMITER ;
-
-DROP PROCEDURE IF EXISTS CANCEL_RESERVATION;
-DELIMITER $$
-CREATE PROCEDURE CANCEL_RESERVATION(_id INT(11))
-BEGIN
-	DECLARE _exists BOOLEAN DEFAULT FALSE;
-	SELECT COUNT(*) > 0 INTO _exists FROM __reservations r WHERE r.id = _id;
-	IF _exists THEN
-		UPDATE __reservations SET status = "CANCELLED" WHERE id = _id;
-		SELECT CONCAT("Reservation CANCELLED!") as message, "1" as statusCode;
-	ELSE
-		SELECT "Still PENDING." as message, "0" as statusCode;
-	END IF;
-END $$
-DELIMITER ;
-
-DROP PROCEDURE IF EXISTS VIEW_PENDING;
-
-DROP PROCEDURE IF EXISTS FIND_SIMILAR;
-DELIMITER $$
-CREATE PROCEDURE FIND_SIMILAR()
-BEGIN
-	DECLARE _exists BOOLEAN DEFAULT FALSE;
-	SELECT COUNT(*) > 0 INTO _exists FROM __reservations r, __reservations s WHERE  (r.status LIKE '%pending%'  AND s.status LIKE '%pending%') AND (r.startDate = s.startDate AND r.id != s.id);
-	IF _exists THEN
-		SELECT *, "1" as statusCode FROM __reservations r, __reservations s WHERE  (r.status LIKE '%pending%'  AND s.status LIKE '%pending%') AND (r.startDate = s.startDate AND r.id != s.id );
-	ELSE
-		SELECT " " as message, "0" as statusCode;
-	END IF;
-END $$
-DELIMITER ;
+DELIMITER ; 

@@ -13,6 +13,7 @@
 		<link rel="author" href="humans.txt">
 		<?php RModuleMgr::renderStyles(); ?>
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Allura'>
 		<link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" href="static/img/apple-touch-icon.png">
 		<link rel="apple-touch-icon-precomposed" href="static/img/apple-touch-icon-precomposed.png">

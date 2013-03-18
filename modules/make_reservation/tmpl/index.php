@@ -1,11 +1,11 @@
 <?php if(!isset($packages)) $packages = API::execute("karla/read_packages",array());?>
-<div id="make_reservation_div" class="span9 module">
+<div id="make_reservation_div" class="module well">
 	<h3>Make Reservation</h3>
 	<form method="POST" action="<?php echo RConfig::ajax_url?>make_reservation" onsubmit="return make_reservation(this);" class="form">
 		<input type="hidden" id="packageName_temp2" name="packageId"/>
 		<div class="input-prepend">
-			<span class="add-on">Title</span>
-			<input type="text" name="title" required="required" class="span8" placeholder="e.g. Heaven's 7th Birthday!"/>
+			<span class="add-on"><i class="icon-book"></i></span>
+			<input type="text" name="title" required="required" class="span8" placeholder="Title e.g. Heaven's 7th Birthday!"/>
 		</div>
 		<div class="input-prepend">
 			<span class="add-on"><i class="icon-gift"></i></span>
@@ -17,18 +17,32 @@
 		</div>
 		<div class="input-prepend">
 			<span class="add-on"><i class="icon-th-list"></i></span>
-			<textarea name="additionalRequest" max="1500" placeholder="Additional Request" class="span8"></textarea>
+			<textarea name="additionalRequest" max="2000" placeholder="Additional informations, requests, comments, etc.." class="span8" rows="7"></textarea>
 		</div>
-		<div class="form-actions">
-			<div class="input-prepend">
-				<span class="add-on"><i class="icon-calendar"></i> From : </span>
-				<input type="date" name="startDate" required="required" />
-			</div>
-			<div class="input-prepend">
-				<span class="add-on"><i class="icon-calendar"></i> To : </span>
-				<input type="date" name="endDate" required="required" />
-			</div>
-			<input type="submit" class="btn btn-primary btn-large" value="Make Reservation" />
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-calendar"></i> Fr : </span>
+			<input type="date" name="startDate" required="required" />
 		</div>
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-time"></i> Time : </span>
+			<input type="number" min="1" max="12" name="startTime" required="required"/>
+			<select name="startMeridian">
+				<option value='AM'>AM</option>
+				<option value='PM'>PM</option>
+			</select>
+		</div>
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-calendar"></i> To : </span>
+			<input type="date" name="endDate" required="required" />
+		</div>
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-time"></i> Time : </span>
+			<input type="number" min="1" max="12" name="endTime" required="required"/>
+			<select name="endMeridian">
+				<option value='AM'>AM</option>
+				<option value='PM'>PM</option>
+			</select>
+		</div>
+		<button type="submit" class="btn btn-primary btn-large" data-default-text="Make Reservation" data-loading-text="Processing ..." id="makeReservationButton">Make Reservation</button>
 	</form>
 </div>

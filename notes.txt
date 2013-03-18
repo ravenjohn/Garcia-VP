@@ -1,39 +1,43 @@
 anyone can:
 
-view packages - done
-view galleries - done
-create user account - done
+	*create user account - done
+	view packages - done
+	view galleries - done
+	view feedback
 
 
 registered user can:
 
-login - done
-logout - done
-create reservation - done
-cancel reservation
-add feedback
-view reservations - done
-view quotation
-edit profile
+	*login - done
+	*logout - done
+	*create reservation - done
+	*cancel reservation
+	*add feedback
+	*edit profile
+	*view profile
+	view reservations - done
+	view quotation
 
 
 admin can:
 
-login - done
-view reservations in calendar
-view conflicts
-approve/cancel reservation
+	*login - done
+	view reservations in calendar
+	view conflicts
+	*approve reservation
+	*cancel reservation
 
-create/delete package - done
+	*create package - done
+	*delete package - done
 
-create quotation
-view summary of sales per day, week, month
+	*create quotation
+	view summary of sales per day, week, month
 
-approve feedback
+	*approve feedback
 
-change password
+	*change password
 
-view user profile
+	*view user profile
 
-create/delete/rename gallery
-add/create pictures in gallery
+	*create/delete/rename gallery
+	add/create pictures in gallery
