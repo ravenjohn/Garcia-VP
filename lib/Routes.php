@@ -22,9 +22,9 @@
 			if(isset($_SESSION['role'])){
 				$modules[] = "profile_nav";
 				if($_SESSION['role']=='admin'){
+					$modules[] = "check_for_conflict";	
 					$modules[] = "reservation_calendar";
 					$modules[] = "manage_package";
-					$modules[] = "check_for_conflict";	
 				}
 				$modules[] = "manage_reservation";
 			}
