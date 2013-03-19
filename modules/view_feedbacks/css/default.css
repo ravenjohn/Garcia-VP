@@ -8,8 +8,9 @@
 	position: relative;
 	margin-bottom: 50px;
 }
-.dis-approve-button{
+.feedbackToggleButton{
 	position: absolute;
-	right: 0;
-	top: -15px;
+	right: 15px;
+	top: 1px;
+	cursor: pointer;
 }

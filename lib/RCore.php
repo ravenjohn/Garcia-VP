@@ -81,7 +81,7 @@
 		public static function sanitize($l,$i){
 			$k = array();
 			foreach($i as $j)
-				$k[]=mysqli_escape_string($l,trim($j));
+				$k[]=htmlspecialchars(mysqli_escape_string($l,trim($j)), ENT_QUOTES, 'UTF-8');
 			return $k;
 		}
 		

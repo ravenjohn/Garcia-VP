@@ -4,8 +4,14 @@ function validateLogin(f){
 		function(data, textStatus, jqXHR) {
 			$('#loginButton').button('default');
 			if(jqXHR.status==200){
+				console.log(data);
 				if(data=="0")
 					alertModal("Sign In","Incorrect username or password.&nbsp;:(&nbsp;Please try again.");
+				else if(data=="2")
+					alertModal("Sign In","Please confirm your account through your email, &nbsp; first. &nbsp; :)
+						<br />
+						<button class='btn' onclick='resendConfirmationToken();' data-loading-text='Sending ...' data-success-text='Sent!' id='resendConfButton'> Resend Confirmation Email </button>
+					");
 				else
 					loadModules();
 			}
@@ -58,9 +64,27 @@ function sendResetPassword(){
 		function(data, textStatus, jqXHR) {
 			$('#sendResetPasswordButton').button('default');
 			if(jqXHR.status==200){
+				console.log(data);
 				data = JSON.parse(data);
 				data = data['data'][0];
 				alertModal("Forgot Password",(data['status']=='0')?"Email is not found.&nbsp;:(":"Password reset instruction has been sent to your email account! &nbsp; :)");
+			}else{
+				alert("Something went wrong :(");				
+			}
+		}
+	);
+}
+function resendConfirmationToken(){
+	$('#resendConfButton').button('loading');
+	$.post( 'ajax/?send_confirmation_email', {'email' : $('#loginEmail').val()},
+		function(data, textStatus, jqXHR) {
+			if(jqXHR.status==200){
+				console.log(data);
+				data = JSON.parse(data);
+				data = data['data'][0];
+				$('#resendConfButton').button('success');
+				$('#resendConfButton').addClass('disabled');
+				$('#resendConfButton').attr("disabled","disabled");
 			}else{
 				alert("Something went wrong :(");				
 			}

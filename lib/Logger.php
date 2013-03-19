@@ -12,7 +12,7 @@
 
 		public static function log($mode, $api, $params, $name, $message){
 			if((!RConfig::log || (strpos($api,'login') !== false) || (strpos($api,'password') !== false) || (strpos($api,'sign') !== false)) && $mode!='E') return;
-			$paramString = (gettype($params)=="array")?((sizeof($params)==0)?"none":implode(',',$params)):$params;
+			$paramString = serialize($params);
 			$fh = fopen(RConfig::logs_path.$mode.date('-Y-n-j').'.log','a');
 			fwrite($fh, date("G:i:s")."|".RLogger::getIP()."|".$api.'|'.$name."|".$paramString."|".$message."\n");
 			fclose($fh);

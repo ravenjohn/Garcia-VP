@@ -12,6 +12,9 @@
 	$i=0;
 	foreach($feedbacks['data'] as $f){?>
 		<div class="well feedback-well">
+			<?php if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin'){?>
+				<a class="feedbackToggleButton" id="ftb<?php echo $f['id']?>" title="Approve" onclick="toggleFeedback(<?php echo $f['id']?>);"><i class="icon-eye-<?php echo ($f['status']=="1")?"open":"close";?>"></i></a>
+			<?php }?>
 			<blockquote class="pull-<?php echo ($i%2==0)?'right':'left'?> justifyed" style="width: 95%;">
 				<i class="icon-quote-<?php echo ($i%2==0)?'left':'right'?> icon-4x icon-muted pull-<?php echo (++$i%2==0)?'right':'left'?>"></i>
 				<?php echo $f['content']; ?><br />
@@ -19,12 +22,6 @@
 				<div class="clearfix"></div>
 			</blockquote>
 			<div class="clearfix"></div>
-			<?php if($f['status'] == 'PENDING'){?>
-			<div class="btn-group dis-approve-button">
-				<button class="btn btn-info" title="Approve"><i class="icon-ok"></i></button>
-				<button class="btn" title="Disprove"><i class="icon-remove"></i></button>
-			</div>
-			<?php }?>
 		</div>
 	<?php }?>
 </div>

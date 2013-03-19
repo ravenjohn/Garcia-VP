@@ -10,6 +10,8 @@ $('.main_menu_link').click(
 );
 
 function alertModal(modalHeader,modalBody){
+	$('#modalBody').html();
+	$('#modalHeader').html();
 	$('#modalHeader').html(modalHeader);
 	$('#modalBody').html(modalBody);
 	$('#alertModal').modal('show');

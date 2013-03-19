@@ -8,4 +8,4 @@
 		$error_message = "Request is missing required parameter(s)";
 	}else $input = API::sanitize($link,$input);
 	
-	$query = "SELECT * FROM __quotations WHERE reservationId = '$input[0]';";
+	$query = "SELECT a.*, c.fullName, c.address, b.* FROM __quotations a, __reservations b, __users c WHERE a.reservationId = '$input[0]' AND b.id = '$input[0]' AND b.id = a.reservationId AND c.email = b.email;";
