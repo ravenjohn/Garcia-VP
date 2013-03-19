@@ -13,18 +13,19 @@
 		else if($g=='feedbacks')
 			$modules[] = "view_feedbacks";
 		else if($g=='packages'){
-			if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin')
-				$modules[] = "manage_package";
-			else{
-				$modules[] = "view_packages";
-				$modules[] = "make_reservation";
-			}
+			$modules[] = "view_packages";
+			$modules[] = "make_reservation";
 		}
 		if(!isset($_SESSION['role']))
 			$modules[] = "footer";	
 		if($g=='home'){
 			if(isset($_SESSION['role'])){
 				$modules[] = "profile_nav";
+				if($_SESSION['role']=='admin'){
+					$modules[] = "check_for_conflict";	
+					$modules[] = "reservation_calendar";
+					$modules[] = "manage_package";
+				}
 				$modules[] = "manage_reservation";
 			}
 		}

@@ -16,15 +16,18 @@ function loadModules(a){
 	$('#'+a+'_menu').addClass('active_menu');
 	fadeOutMods($('.module'),a);
 }
-if(window.location.hash=="" || !(
-	window.location.hash=="#home" ||
-	window.location.hash=="#debut" ||
-	window.location.hash=="#packages" ||
-	window.location.hash=="#feedbacks" ||
-	window.location.hash=="#contact"
+z = window.location.hash;
+y = z.substring(1,8);
+if(z=="" || !(
+	z=="#debut" ||
+	z=="#packages" ||
+	z=="#feedbacks" ||
+	z=="#contact"
 )){
-	window.location.hash = 'gallery';
+	window.location.hash = 'home';
 }
+if(y=="gallery")
+	window.location.hash = 'gallery';
 function loadMenu(){
 	$.post("?get=menu",{},
 		function (data){

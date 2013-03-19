@@ -8,4 +8,4 @@
 		$error_message = "Request is missing required parameter(s)";
 	}else $input = API::sanitize($link,$input);
 
-	$query = "SELECT * FROM __users WHERE email = '$input[0]';";
+	$query = "SELECT email, fullName, address, contact, confirmed, confirmationToken FROM __users WHERE email = '$input[0]';";

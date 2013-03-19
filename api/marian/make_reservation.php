@@ -4,8 +4,8 @@
 	$input[] = $_POST['title'];
 	$input[] = $_SESSION['email'];
 	$input[] = $_POST['packageId'];
-	$input[] = $_POST['startDate'];
-	$input[] = $_POST['endDate'];
+	$input[] = $_POST['startDate'].' '.(intval($_POST['startTime'])+(($_POST['startMeridian']=='AM')?0:12)).':00:00';
+	$input[] = $_POST['endDate'].' '.(intval($_POST['endTime'])+(($_POST['endMeridian']=='AM')?0:12)).':00:00';
 	$input[] = $_POST['location'];
 	$input[] = $_POST['additionalRequest'];
 

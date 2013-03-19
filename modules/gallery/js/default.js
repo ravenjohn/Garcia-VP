@@ -24,6 +24,26 @@ function loadGallery(a){
 	fixGallery(b);	
 	slowInvi($('.'+a+'_image'),0);	
 }
+function showAddGalleryModal(){
+	alertModal("Add Gallery",$('#addGalleryDiv').html());
+	return false;
+}
+
+function addGallery(f){
+	$('#addGalleryButton').button('loading');
+	$.post($(f).attr('action'),$(f).serialize(),
+		function(data,textStatus,jqXHR){
+			if(jqXHR.status==200){
+				console.log(data);
+				$('#gallery_menus').append('<a class="btn sub_menu_link" id="gallery_'+f.galleryName.value.toLowerCase()+'_menu" href="#gallery-'+f.galleryName.value.toLowerCase()+'">'+f.galleryName.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})+'</a>');
+				$('#addGalleryButton').button('default');
+			}
+			else
+				alert("Something went wrong :(");
+		}
+	);
+	return false;
+}
 
 $('.sub_menu_link').click(
 	function (e){
@@ -33,8 +53,6 @@ $('.sub_menu_link').click(
 		return false;
 	}
 );
-
-
 arguments = window.imgs;
 for(var i = 0; arguments!=undefined && i<arguments.length; i++){
 	b = arguments[i].split('/')[3];
@@ -47,11 +65,9 @@ for(var i = 0; arguments!=undefined && i<arguments.length; i++){
 		$("<img />").attr("src", arguments[i]);
 	}
 }
-
 if(window.location.hash == '#gallery')
 	window.location.hash = 'gallery-wedding';
 loadGallery(window.location.hash);
-
 $('.image_link').click(function (){
 	$(this).css({'z-index':'0'});
 	a = "<img src='"+$(this.innerHTML)[0].src+"' class='img-polaroid'/>";
@@ -62,7 +78,6 @@ $('.image_link').click(function (){
 	$('#gal_inner_overlay').css({'width': c+'px' });
 	$('#gal_overlay, #gal_inner_overlay').fadeIn();
 });
-
 $('#gal_overlay, #gal_inner_overlay').click(function(){
 	$(this).fadeOut();
 });

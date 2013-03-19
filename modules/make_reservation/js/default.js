@@ -16,6 +16,7 @@ function make_reservation(f){
 		function(data,textStatus,jqXHR){
 			$('#makeReservationButton').button('default');
 			if(jqXHR.status==200){
+				console.log(data);
 				if(data=="0"){
 					alertModal("Make Reservation","Please login first before making a reservation.");
 				}else{

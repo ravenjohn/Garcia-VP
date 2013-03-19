@@ -5,7 +5,7 @@
 	$input[] = $_POST['fullName'];
 	$input[] = $_POST['address'];
 	$input[] = $_POST['contact'];
-	$input[] = $_POST['confirmationToken'];
+	$input[] = sha1(md5($_POST['confirmationToken'].RConfig::PASSWORD_SALT));
 	$check = false;
 
 	if(API::checkEmpty($input)){
