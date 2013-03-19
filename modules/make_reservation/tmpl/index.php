@@ -1,4 +1,4 @@
-<?php if(!isset($packages)) $packages = API::execute("karla/read_packages",array());?>
+<?php if(!isset($packages)) $packages = API::execute("raven/get_packages",array());?>
 <div id="make_reservation_div" class="module well">
 	<h3>Make Reservation</h3>
 	<form method="POST" action="<?php echo RConfig::ajax_url?>make_reservation" onsubmit="return make_reservation(this);" class="form">
@@ -24,7 +24,7 @@
 			<input type="date" name="startDate" required="required" />
 		</div>
 		<div class="input-prepend">
-			<span class="add-on"><i class="icon-time"></i> Time : </span>
+			<span class="add-on"><i class="icon-time"></i> Hour : </span>
 			<input type="number" min="1" max="12" name="startTime" required="required"/>
 		</div>
 		<select name="startMeridian">
@@ -36,7 +36,7 @@
 			<input type="date" name="endDate" required="required" />
 		</div>
 		<div class="input-prepend">
-			<span class="add-on"><i class="icon-time"></i> Time : </span>
+			<span class="add-on"><i class="icon-time"></i> Hour : </span>
 			<input type="number" min="1" max="12" name="endTime" required="required"/>
 		</div>
 		<select name="endMeridian">

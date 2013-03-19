@@ -55,6 +55,6 @@
 				$randomString .= $characters[rand(0, strlen($characters) - 1)];
 			}
 			
-			return sha1(md5($randomString));
+			return $randomString;
 		}
 	}

@@ -16,7 +16,7 @@ registered user can:
 	*edit profile - done
 	*view profile - done
 	view reservations - done
-	view quotation
+	view quotation - done
 
 
 admin can:
@@ -27,17 +27,23 @@ admin can:
 	
 	*approve reservation - done
 	*cancel reservation - done
+	*view user profile - done
+	*change password - done
+	
+	view reservations in calendar - done
+	view conflicts - done
+	*toggle feedback - done
+	
+	
+	*create quotation - done
+	view summary of sales per day, week, months
 	
 	*create gallery
 	*delete gallery
 	*rename gallery
 	*add pictures
 	*delete pictures
-	*approve feedback
-	*change password
-	*view user profile
 	
-	view reservations in calendar
-	view conflicts
-	*create quotation
-	view summary of sales per day, week, months
+	upload
+	video
+	git

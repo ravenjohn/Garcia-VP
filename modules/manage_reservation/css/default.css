@@ -11,9 +11,18 @@
     -o-transition-duration: 1s; /* opera */
     -ms-transition-duration: 1s; /* ie 9 */
 	position: absolute;
+	padding-bottom: 10px;
+}
+.reservationView h3{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .justified{
 	text-align: justify;
 	text-indent: 30px;
 	line-height: 2em;
+}
+#createQuotationForm{
+	text-align: center;
 }

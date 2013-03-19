@@ -1,4 +1,4 @@
-<?php if(!isset($packages)) $packages = API::execute("karla/read_packages",array());?>
+<?php if(!isset($packages)) $packages = API::execute("raven/get_packages",array());?>
 <div id="view_packages_div" class="module">
 	<h3>Packages</h3>
 	<table class="table table-striped table-hover" id="view_packages_table">

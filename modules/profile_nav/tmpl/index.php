@@ -1,4 +1,5 @@
 <?php
+	defined('AUTH') or die;
 	$res = API::execute("raven/count_reservations",array());
 	$res = $res['data'][0]['reservationCount'];
 ?>
@@ -14,11 +15,19 @@
 				<a class="brand" href="#">Hi <span class="bold"><?php echo ($_SESSION['role']=='user')?$_SESSION['email']:$_SESSION['username']?>!</span></a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
+						<?php if($_SESSION['role']=='admin'){?>
 						<li>
-							<a><?php if($_SESSION['role']=='user') echo 'My';?> Reservations <span class="badge badge-important"><?php echo $res; ?></span></a>
+							<a onclick="return toggleCalendar();" href="#home">Calendar</a>
 						</li>
 						<li>
-							<a onclick="$('#packages_menu').click(); return false" href="#"><?php echo ($_SESSION['role']=='user')?"Make Reservation":"Manage Packages";?></a>
+							<a onclick="return toggleSummary();" href="#home">Summary</a>
+						</li>
+						<?php }?>
+						<li>
+							<a <?php if($_SESSION['role']=='admin') echo 'href="#home" onclick="return toggleReservations();"';?>><?php if($_SESSION['role']=='user') echo 'My';?> Reservations <span class="badge badge-important"><?php echo $res; ?></span></a>
+						</li>
+						<li>
+							<a onclick="<?php echo ($_SESSION['role']=='admin')?'return toggleManagePackages();':"$('#packages_menu').click(); return false;";?>" href="#home"><?php echo ($_SESSION['role']=='user')?"Make Reservation":"Manage Packages";?></a>
 						</li>
 					</ul>
 					<ul class="nav pull-right">
@@ -27,7 +36,11 @@
 								Account <i class="icon-cog"></i>
 							</a>
 							<ul class="dropdown-menu">
+								<?php if($_SESSION['role']=='user'){?>
 								<li><a href="#home" onclick="return showEditProfile();">Edit Profile</a></li>
+								<?php }else if($_SESSION['role']=='admin'){?>
+								<li><a href="#home" onclick="return adminChangePasswordModal();">Change Password</a></li>
+								<?php }?>
 								<li class="divider"></li>
 								<li><a href="#home" onclick="logout();"><i class="icon-signout"></i> Logout</a></li>
 							</ul>
@@ -79,4 +92,21 @@
 	</form>
 </div>
 
+<?php }else if($_SESSION['role']=='admin'){?>
+<div id="changePasswordDiv" class="none">
+	<form class="form" action="<?php echo RConfig::ajax_url;?>admin_password" method="POST" onsubmit="return changePassword(this);" id="changePasswordForm">
+		<br />
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-lock"></i></span>
+			<input type="password" name="password" max="16" pattern=".{8,16}" placeholder="New Password" class="text-tooltip" data-toggle="tooltip" title="8-16 characters only." data-html="true"/>
+		</div>
+		<br />
+		<div class="input-prepend">
+			<span class="add-on"></span>
+			<input type="password" name="cpassword" max="16" pattern=".{8,16}" placeholder="Confirm Password" class="text-tooltip" data-toggle="tooltip" title="Just retype your password." data-html="true"/>
+		</div>
+		<br />
+		<button type="submit" class="btn btn-large btn-primary" id="changePasswordButton" data-loading-text="Saving ..." data-success-text="SAVED!" data-default-text="SAVE!">SAVE!</button>
+	</form>
+</div>
 <?php }?>

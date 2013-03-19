@@ -1,5 +1,8 @@
-<?php $packages = API::execute("karla/read_packages",array());?>
-<div id="manage_package_div" class="row module">
+<?php
+	defined('AUTH') or die;
+	$packages = API::execute("raven/get_packages",array());
+?>
+<div id="manage_package_div" class="module none row">
 	<div class="span3">
 		<h3>Create Package</h3>
 		<form method="POST" action="<?php echo RConfig::ajax_url?>create_package" onsubmit="return create_package(this);" class="form">
