@@ -4,5 +4,6 @@
 	 *	and delete this comment :)
 	 */
 ?>
+<?php defined('AUTH') or die; ?>
 <div id="_div">
 </div>
