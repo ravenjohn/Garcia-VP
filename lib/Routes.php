@@ -4,10 +4,12 @@
 	if(isset($_GET['get'])){
 		$g = $_GET['get'];
 		$modules = array();
-		if($g=='home' && !isset($_SESSION['role']))
+		if($g=='home' && !isset($_SESSION['role'])){
 			$modules[] = "sign_in_up";
-		else if($g=='gallery')
+			}
+		else if($g=='gallery'){
 			$modules[] = "gallery";
+			}
 		else if($g=='contact')
 			$modules[] = "contact";
 		else if($g=='feedbacks')

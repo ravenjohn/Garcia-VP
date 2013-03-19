@@ -98,5 +98,30 @@
 	else if(isset($_GET['view_summary'])){
 		print_r(json_encode(API::execute("karla/view_summary",$_POST)));
 	}
+	else if(isset($_GET['addGallery'])){
+		if(is_dir("../static/img/gallery/{$_POST['addGallery']}"))echo "0";
+		else{
+			mkdir("../static/img/gallery/{$_POST['addGallery']}"); 
+			echo "1";
+		}
+		header('Location: '.RConfig::app_url);
+	}
+	else if(isset($_GET['renameGallery'])){
+		if(is_dir("../static/img/gallery/{$_POST['renameGallery']}"))echo "0";
+		else{
+			rename("../static/img/gallery/{$_GET['renameGallery']}","../static/img/gallery/{$_POST['renameGallery']}"); 
+			echo "1";
+		}
+		header('Location: '.RConfig::app_url);
+	}
+	else if(isset($_GET['deleteGallery'])){
+		$dir="../static/img/gallery/".$_GET['deleteGallery'];
+		foreach (scandir($dir) as $item) {
+			if ($item == '.' || $item == '..') continue;
+				unlink($dir.DIRECTORY_SEPARATOR.$item);
+		}
+		rmdir($dir);
+		header('Location: '.RConfig::app_url);
+	}
 	else{?><h1>You are not allowed to use this API.</h1><?php }
 ?>

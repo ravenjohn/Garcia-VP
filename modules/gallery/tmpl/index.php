@@ -4,7 +4,7 @@
 		$a = explode("/",$file);
 		$a = end($a);?>
 		<a class="btn sub_menu_link" id="gallery_<?php echo strtolower($a); ?>_menu" href="#gallery-<?php echo strtolower($a); ?>"><?php echo ucfirst($a); ?></a>
-	<?php }?>
+	<?php } ;?>
 	</div>
 	<br />
 	<br />

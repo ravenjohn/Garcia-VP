@@ -43,6 +43,6 @@
 			<option value='AM'>AM</option>
 			<option value='PM'>PM</option>
 		</select>
-		<button type="submit" class="btn btn-primary btn-large" data-default-text="Make Reservation" data-loading-text="Processing ..." id="makeReservationButton">Make Reservation</button>
+		<button type="submit" class="btn btn-primary btn-large" data-default-text="Make Reservations" data-loading-text="Processing ..." id="makeReservationButton">Make Reservation</button>
 	</form>
 </div>
