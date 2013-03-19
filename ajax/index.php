@@ -66,6 +66,9 @@
 		session_destroy();
 		echo "Successfully logged out";
 	}
+	else if(isset($_GET['edit_account'])){
+		print_r(json_encode(API::execute("conrad/edit_account",$_POST)));
+	}
 	else if(isset($_GET['create_package'])){
 		print_r(json_encode(API::execute("karla/create_package",$_POST)));
 	}
@@ -84,6 +87,13 @@
 	}
 	else if(isset($_GET['reservation_cancel'])){
 		print_r(json_encode(API::execute("marian/cancel_reservation",$_POST)));
+	}
+	else if(isset($_GET['add_feedback'])){
+		if(isset($_SESSION['role'])){
+			print_r(json_encode(API::execute("raven/add_feedback",$_POST)));
+		}else{
+			echo "0";
+		}
 	}
 	else if(isset($_GET['view_summary'])){
 		print_r(json_encode(API::execute("karla/view_summary",$_POST)));

@@ -44,7 +44,7 @@ function forgotPasswordForm(){
 	$('#sendResetPasswordButton').fadeIn("slow");
 	return false;
 }
-function showLoginForm(){
+function showUserLoginForm(){
 	$('#backToLogin').fadeOut("fast");
 	$('#sendResetPasswordButton').fadeOut("fast");
 	$('#passwordBlock').fadeIn("slow");

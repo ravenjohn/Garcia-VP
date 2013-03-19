@@ -20,10 +20,10 @@ function make_reservation(f){
 					alertModal("Make Reservation","Please login first before making a reservation.");
 				}else{
 					data = JSON.parse(data);
-					if(data.error=="")
+					if(data.error==""){
 						alertModal("Make Reservation","Successfully reserved. Please wait for the admin to contact you.");
-					else
-						alertModal("Make Reservation",data.error);
+						f.reset();
+					}
 				}
 			}
 			else

@@ -46,8 +46,8 @@
 				</div>
 				<br />
 				<small>
-					<a onclick="return forgotPasswordForm();" id="forgotPasswordText" href="">I forgot my password :'(</a>
-					<a onclick="return showLoginForm();" class="none" id="backToLogin" href="">Login</a>
+					<a onclick="return forgotPasswordForm();" id="forgotPasswordText" href="#home">I forgot my password :'(</a>
+					<a onclick="return showUserLoginForm();" class="none" id="backToLogin" href="#home">Login</a>
 				</small>
 				<br />
 				<button type="button" id="sendResetPasswordButton" class="btn btn-large btn-primary none" data-loading-text="Sending ..." data-default-text="SEND INSTRUCTIONS" onclick="sendResetPassword();">SEND INSTRUCTIONS</button>

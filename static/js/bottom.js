@@ -32,3 +32,5 @@ function loadMenu(){
 		}
 	);
 }
+loadMenu();
+loadModules();

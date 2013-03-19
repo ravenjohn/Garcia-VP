@@ -39,6 +39,5 @@
 		</section>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRcpm6XbNvVll0lJTUHmXsgBa_7wP8HP0&sensor=false"> </script>
 		<?php RModuleMgr::renderScripts(); ?>
-		<script type="text/javascript">loadMenu();loadModules();</script>
 	</body>
 </html>
