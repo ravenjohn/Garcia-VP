@@ -1,0 +1,15 @@
+#feedbackForm{
+	text-align: center;
+}
+.justifyed{
+	text-align: justify;
+}
+.feedback-well{
+	position: relative;
+	margin-bottom: 50px;
+}
+.dis-approve-button{
+	position: absolute;
+	right: 0;
+	top: -15px;
+}
