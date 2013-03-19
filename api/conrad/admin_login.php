@@ -1,7 +1,7 @@
 <?php
 	defined('AUTH') or die;
 	$input[] = $_POST['username'];
-	$input[] = $_POST['password'];
+	$input[] = $_POST['password'].RConfig::PASSWORD_SALT;
 	$check = false;
 
 	if(API::checkEmpty($input)){

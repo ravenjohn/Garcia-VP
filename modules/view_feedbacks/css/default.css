@@ -1,0 +1,16 @@
+#feedbackForm{
+	text-align: center;
+}
+.justifyed{
+	text-align: justify;
+}
+.feedback-well{
+	position: relative;
+	margin-bottom: 50px;
+}
+.feedbackToggleButton{
+	position: absolute;
+	right: 15px;
+	top: 1px;
+	cursor: pointer;
+}

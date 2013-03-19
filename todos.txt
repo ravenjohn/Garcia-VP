@@ -1,0 +1,15 @@
+user manual
+srs
+user story
+
+modules
+	-R  add/delete/view feedback
+	-R  view user quotation
+	-R  create/edit user quotation
+	-R  view summary of sales
+	-R  send email for confirmation, password forgotten
+	-R add/delete pictures in gallery
+	-R add/delete gallery
+	-C reservations calendar
+	-R  lots of frontend input validations
+video

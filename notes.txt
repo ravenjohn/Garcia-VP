@@ -1,0 +1,49 @@
+anyone can:
+
+	*create user account - done
+	view packages - done
+	view galleries - done
+	view feedback - done
+
+
+registered user can:
+
+	*login - done
+	*logout - done
+	*create reservation - done
+	*cancel reservation - done
+	*add feedback - done
+	*edit profile - done
+	*view profile - done
+	view reservations - done
+	view quotation - done
+
+
+admin can:
+
+	*login - done
+	*create package - done
+	*delete package - done
+	
+	*approve reservation - done
+	*cancel reservation - done
+	*view user profile - done
+	*change password - done
+	
+	view reservations in calendar - done
+	view conflicts - done
+	*toggle feedback - done
+	
+	
+	*create quotation - done
+	view summary of sales per day, week, months
+	
+	*create gallery
+	*delete gallery
+	*rename gallery
+	*add pictures
+	*delete pictures
+	
+	upload
+	video
+	git
