@@ -1,13 +1,7 @@
 <?php if(!isset($packages)) $packages = API::execute("karla/read_packages",array());?>
-<div id="view_packages_div" class="span9 module">
+<div id="view_packages_div" class="module">
 	<h3>Packages</h3>
-	<table class="table table-striped" id="view_packages_table">
-		<tr>
-			<th>Category</th>
-			<th>Name</th>
-			<th>Cost</th>
-			<th>Action</th>
-		</tr>
+	<table class="table table-striped table-hover" id="view_packages_table">
 		<?php if(empty($packages['items'])){ ?>
 		<tr class="remove">
 			<th colspan="3">No packages to display . . .  :( </th>
@@ -15,7 +9,6 @@
 		<?php }else{?>
 			<?php foreach($packages['data'] as $p){?>
 			<tr>
-				<td><?php echo $p['category']; ?></td>
 				<td><?php echo $p['name']; ?></td>
 				<td><?php echo $p['cost']; ?></td>
 				<td>
