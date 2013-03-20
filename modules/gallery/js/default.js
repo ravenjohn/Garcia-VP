@@ -61,8 +61,6 @@ for(var i = 0; arguments!=undefined && i<arguments.length; i++){
 		if(arguments[i].split('/')[4] == 'bg.jpg' || arguments[i].split('/')[4] == 'bg.png') continue;	
 		a = "<div class='"+b+"_image gallery_image rotate-"+rand+"'><a class='image_link'><img src='"+arguments[i]+"' alt='gallery picture' class='img-polaroid'/></a></div>";
 		$("#"+b+"_gallery").prepend(a);
-	}else{
-		$("<img />").attr("src", arguments[i]);
 	}
 }
 if(window.location.hash == '#gallery')

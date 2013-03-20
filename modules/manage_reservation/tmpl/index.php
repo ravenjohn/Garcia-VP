@@ -47,7 +47,7 @@
 						<?php }else if($p['status']=='APPROVED' && $_SESSION['role'] == 'user' && $p['hasQuotation']=='1'){?>
 							<button type="button" class="btn btn-primary pull-right" onclick="view_quotation(<?php echo $p['id']?>);" id="quotationButton<?php echo $p['id']?>" data-loading-text="Loading...">VIEW QUOTATION</button>
 						<?php } else if($p['status']=='APPROVED' && $_SESSION['role'] == 'admin'){?>
-							<button type="button" class="btn btn-success pull-right" onclick="viewQuotationModal(<?php echo $p['id']?>,'<?php echo $p['name'].' '.$p['cost']; ?>');" id="quotationButton<?php echo $p['id']?>" data-loading-text="Loading...">MANAGE QUOTATION</button>
+							<button type="button" class="btn btn-success pull-right" onclick="viewQuotationModal('<?php echo $p['id']?>','<?php echo $p['name'].' '.$p['cost']; ?>');" id="quotationButton<?php echo $p['id']?>" data-loading-text="Loading...">MANAGE QUOTATION</button>
 						<?php }?>
 					</div>
 					
@@ -64,44 +64,44 @@
 	<div id="createQuotationDiv" class="none">
 		<br />
 		<form class="form" method="POST" onsubmit="return createQuotation(this);" action="<?php echo RConfig::ajax_url;?>view_quotation" id="createQuotationForm" target="_blank">
+			<input type="hidden" name="reservationId" id="quotationReservationId"/>
 			<table class="table table-hover table-bordered" id="quotationTable">
-					<input type="hidden" name="reservationId" id="quotationReservationId"/>
-					<tr id="quotationTableHeader">
-						<th class="span4">Items</th>
-						<th>Cost</th>
-					</tr>
-					<tr>
-						<td>
-							<input type="text" class="span4" name="item[]" placeholder="Photobooth Service"/>
-						</td>
-						<td>
-							<div class="input-append">
-								<input type="number" class="span1 costInput newInput" name="cost[]" placeholder="4000"/>
-								<span class="add-on">.00</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="text" class="span4" name="item[]" placeholder="Additional Request"/>
-						</td>
-						<td>
-							<div class="input-append">
-								<input type="number" class="span1 costInput newInput" name="cost[]" placeholder="4000"/>
-								<span class="add-on">.00</span>
-							</div>
-						</td>
-					</tr>
-					<tr id="addRowButton">
-						<td colspan="2" align="center">
-							<button class="btn span5" type="button" onclick="return addQuotationItem();"><i class="icon-plus"></i> ADD ITEM</button>
-						</td>
-					</tr>
-					<tr>
-						<th align='right'>TOTAL</th>
-						<td id="totalCost">0.00</td>
-						<input type="hidden" name="total" id="totalCostInput"/>
-					</tr>
+				<tr id="quotationTableHeader">
+					<th class="span4">Items</th>
+					<th>Cost</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" class="span4" name="item[]" placeholder="Photobooth Service"/>
+					</td>
+					<td>
+						<div class="input-append">
+							<input type="number" class="span1 costInput newInput" name="cost[]" placeholder="4000"/>
+							<span class="add-on">.00</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" class="span4" name="item[]" placeholder="Additional Request"/>
+					</td>
+					<td>
+						<div class="input-append">
+							<input type="number" class="span1 costInput newInput" name="cost[]" placeholder="4000"/>
+							<span class="add-on">.00</span>
+						</div>
+					</td>
+				</tr>
+				<tr id="addRowButton">
+					<td colspan="2" align="center">
+						<button class="btn span5" type="button" onclick="return addQuotationItem();"><i class="icon-plus"></i> ADD ITEM</button>
+					</td>
+				</tr>
+				<tr>
+					<th align='right'>TOTAL</th>
+					<td id="totalCost">0.00</td>
+					<input type="hidden" name="total" id="totalCostInput"/>
+				</tr>
 			</table>
 			<button class="btn span5 btn-primary btn-large" type="submit" data-loading-text="Rendering ...">VIEW QUOTATION</button>
 		</form>

@@ -12,7 +12,7 @@
 		const app_copyright		= "Copyright 2013";
 		const app_description 	= "Garcia, Photo and Video, Photography, Videography, Advertising";
 
-		const app_url 			= "http://localhost/VERSION_AB5L_GROUP1/";
+		const app_url 			= "http://192.168.1.34/VERSION_AB5L_GROUP1/";
 		const ajax_url 			= "ajax/?";
 
 		const logs_path 		= "C://xampp/htdocs/VERSION_AB5L_GROUP1/_logs/";
@@ -28,9 +28,9 @@
 		
 		const encryptHTML 		= false;
 		
-		const MAIL_NAME 		= "Codewars 2013";
-		const MAIL_USERNAME 	= "codewars2013@gmail.com";
-		const MAIL_PASSWORD 	= "codewarsthebest";
+		const MAIL_NAME 		= "Garciavp Admin";
+		const MAIL_USERNAME 	= "garciavnp@gmail.com";
+		const MAIL_PASSWORD 	= "l1nuXm1nt!";
 		const MAIL_HOST 		= "ssl://smtp.gmail.com";
 		const MAIL_PORT 		= "465";
 		

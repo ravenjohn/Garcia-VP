@@ -14,6 +14,6 @@ $.ajax({
 			icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
 			title : 'We are located here'
 		});
-		$('#map').css({'height' : (screen.height-92)+'px', 'width' : screen.width+'px'});
+		$('#map').css({'height' : (screen.height)+'px', 'width' : screen.width+'px'});
 	}
 });

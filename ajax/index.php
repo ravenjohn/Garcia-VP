@@ -126,8 +126,8 @@
 	else if(isset($_GET['get_quotation'])){
 		print_r(json_encode(API::execute("marian/get_quotation",$_POST)));
 	}
-	else if(isset($_GET['add_gallery']) && $_SESSION['role']=='admin'){
-		echo mkdir("../static/img/gallery/".strtolower($_POST['galleryName']));
+	else if(isset($_GET['view_summary']) && $_SESSION['role']=='admin'){
+		print_r(json_encode(API::execute("karla/view_summary",$_POST)));
 	}
 	else if(isset($_GET['view_quotation'])){
 		

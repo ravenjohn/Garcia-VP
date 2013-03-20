@@ -25,6 +25,7 @@
 					$modules[] = "check_for_conflict";	
 					$modules[] = "reservation_calendar";
 					$modules[] = "manage_package";
+					$modules[] = "view_summary";
 				}
 				$modules[] = "manage_reservation";
 			}

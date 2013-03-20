@@ -29,3 +29,14 @@ BEGIN
 	END IF;
 END $$
 DELIMITER ; 
+
+DROP FUNCTION IF EXISTS TOTAL_COST;
+DELIMITER $$
+CREATE FUNCTION TOTAL_COST(_reservationId INT(11))
+RETURNS INT
+BEGIN
+	DECLARE _total INT(11) DEFAULT 0;
+	SELECT SUM(cost) INTO _total FROM __quotations WHERE reservationId = _reservationId;
+	RETURN IF(_total IS NULL,0,_total);
+END $$
+DELIMITER ; 

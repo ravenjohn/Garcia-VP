@@ -62,6 +62,6 @@ INSERT INTO __packages VALUES("","Photo Booth First Hour","3500 (Every extra hou
 INSERT INTO __packages VALUES("","Photo Service and Booth Package","7000");
 INSERT INTO __packages VALUES("","Photo Service","2500");
 
-INSERT INTO __feedbacks VALUES("","rjlagrimas08@gmail.com","It was true, they really created memories that we'll cherish for a lifetime! :)","APPROVED");
+INSERT INTO __feedbacks VALUES("","conrad0817@gmail.com","It was true, they really created memories that we'll cherish for a lifetime! :)","APPROVED");
 INSERT INTO __feedbacks VALUES("","rjlagrimas08@gmail.com","This is a sample feedback. asdf asdfasf asdfasd asd fadsf asdf asd fhbadsfj asdj jdfad jdn kjadnfk jasndfkasdjf kjdf naksdj nfadkjsfn aksjdfn ajksd nfkajsdfnkajsdfn kajsdf nkasjd fnkasjdf","APPROVED");
 INSERT INTO __feedbacks VALUES("","rjlagrimas08@gmail.com","Ampanget -.-","PENDING");

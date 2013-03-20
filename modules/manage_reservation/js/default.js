@@ -9,7 +9,7 @@ function approve_reservation(a){
 					$('#approveButton'+a).fadeOut('slow');
 					$('#reservationLabel'+a).addClass("label-success");
 					$('#reservationLabel'+a).html("APPROVED");
-					$('#reservationButtons'+a).html('<button type="button" class="btn btn-primary pull-right" onclick="create_quotation('+a+');" id="quotationButton'+a+'" data-loading-text="Loading...">CREATE QUOTATION</button>');
+					$('#reservationButtons'+a).html('<button type="button" class="btn btn-success pull-right" onclick="viewQuotationModal('+a+');" id="quotationButton'+a+'" data-loading-text="Loading...">MANAGE QUOTATION</button>');
 				}
 				else
 					alert("Something went wrong :(");
@@ -57,8 +57,8 @@ function showProfileModal(email){
 }
 
 function viewQuotationModal(a,name){
-	$('#quotationReservationId').val(a);
 	alertModal("Create Quotation<br /><small>"+name+"</small>",$('#createQuotationDiv').html());
+	$('#quotationReservationId').val(a);
 	$.post('ajax/?get_quotation',{'reservationId':a},
 		function(data,textStatus,jqXHR){
 			if(jqXHR.status==200){

@@ -69,18 +69,23 @@ function editAccount(f){
 	return false;
 }
 function toggleReservations(){
-	$('#calendar_div, #manage_package_div').fadeOut("fast", function(){
+	$('#calendar_div, #manage_package_div, #view_summary_div').fadeOut("fast", function(){
 		$('#manage_reservation_div').fadeIn("slow");
 		reMasonReservations();
 	});
 }
 function toggleCalendar(){
-	$('#manage_reservation_div, #manage_package_div').fadeOut("fast", function(){
+	$('#manage_reservation_div, #manage_package_div, #view_summary_div').fadeOut("fast", function(){
 		$('#calendar_div').fadeIn("fast");
 	});
 }
 function toggleManagePackages(){
-	$('#manage_reservation_div, #calendar_div').fadeOut("fast", function(){
+	$('#manage_reservation_div, #calendar_div, #view_summary_div').fadeOut("fast", function(){
 		$('#manage_package_div').fadeIn("fast");
+	});
+}
+function toggleSummary(){
+	$('#manage_reservation_div, #calendar_div, #manage_package_div').fadeOut("fast", function(){
+		$('#view_summary_div').fadeIn("fast");
 	});
 }

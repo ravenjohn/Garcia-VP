@@ -16,3 +16,7 @@ function alertModal(modalHeader,modalBody){
 	$('#modalBody').html(modalBody);
 	$('#alertModal').modal('show');
 }
+arguments = window.imgs;
+for(var i = 0; arguments!=undefined && i<arguments.length; i++){
+	$("<img />").attr("src", arguments[i]);
+}
