@@ -2,7 +2,7 @@
 	<ul id="main_menu" class="nav nav-list affix">
 		<li>
 			<span id="header">
-				<h1>Garcia's<br />Video and Photo</h1>
+				<h1>Garcia's<br />Photo and Video</h1>
 				<p>Videography, Photography,<br />and Advertising.</p>
 			</span>
 		</li>

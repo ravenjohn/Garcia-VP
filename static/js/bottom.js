@@ -16,6 +16,21 @@ function loadModules(a){
 	$('#'+a+'_menu').addClass('active_menu');
 	fadeOutMods($('.module'),a);
 }
+function escapeHTML(a) {
+  return a
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+}
+function loadMenu(){
+	$.post("?get=menu",{},
+		function (data){
+			$('#app_div').before(data);
+		}
+	);
+}
 z = window.location.hash;
 y = z.substring(1,8);
 if(z=="" || !(
@@ -28,12 +43,5 @@ if(z=="" || !(
 }
 if(y=="gallery")
 	window.location.hash = 'gallery';
-function loadMenu(){
-	$.post("?get=menu",{},
-		function (data){
-			$('#app_div').before(data);
-		}
-	);
-}
 loadMenu();
 loadModules();

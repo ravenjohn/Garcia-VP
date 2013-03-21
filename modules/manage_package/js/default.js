@@ -7,8 +7,8 @@ function create_package(f){
 				$('#view_packages_table .remove').remove();
 				$('#view_packages_table tbody').append("
 				<tr>
-				<td>"+f.name.value+"</td>
-				<td>"+f.cost.value+"</td>
+				<td>"+escapeHTML(f.name.value)+"</td>
+				<td>"+escapeHTML(f.cost.value)+"</td>
 				<td><button type=\"button\" class=\"btn\" onclick=\"delete_package_form.id.value="+data.data[0].id+"; delete_package(this);\"><i class=\"icon-trash\"></i></button></td>
 				</tr>");
 				f.reset();
